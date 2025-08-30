@@ -15,17 +15,138 @@
             font-family: 'Inter', sans-serif;
             background-color: #fdfbf7; /* blanc cassé doux */
             color: #4a4a4a; /* gris foncé */
+            display: flex;
+            flex-direction: column; /* Organise le contenu en colonne pour header/main/footer */
+            min-height: 100vh;
         }
         .container-main {
             background-color: #ffffff; /* blanc pur */
             border: 1px solid #d8c4b7; /* beige-brun */
             border-radius: 0.75rem; /* rounded-lg */
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* shadow plus prononcé */
+            position: relative; /* Needed for skill popups positioning */
+            flex-grow: 1; /* Permet au contenu principal de prendre l'espace disponible */
+            margin: 1rem auto; /* Centre le conteneur principal avec marge */
+            /* max-width: 5xl; -- Removed invalid CSS property */
+            width: 100%;
+            padding: 1.5rem; /* Padding interne */
         }
         .section-title {
             color: #0A2342; /* Bleu nuit brillant pour les titres */
             font-weight: 800;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styles */
+        .main-header {
+            background: linear-gradient(90deg, #FF6B6B, #FF8C00, #D4AF37, #0A2342); /* Dégradé de couleurs */
+            background-size: 200% 200%;
+            animation: gradient-animation 10s ease infinite; /* Animation plus lente */
+            color: white;
+            padding: 0.75rem 1.5rem; /* Padding réduit pour un header plus fin */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 50; /* S'assure que le header reste au-dessus */
+        }
+        .header-content-wrapper {
+            max-width: 5xl;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Par défaut en colonne pour mobile */
+            align-items: flex-start; /* Aligné à gauche */
+            position: relative; /* Pour positionner le menu burger */
+        }
+        @media (min-width: 1024px) { /* lg breakpoint for wider screens */
+            .header-content-wrapper {
+                flex-direction: row; /* En ligne pour desktop */
+                justify-content: space-between; /* Espacement entre nom/métier et nav */
+                align-items: center;
+            }
+        }
+        .header-info {
+            text-align: left; /* Aligné à gauche */
+            margin-bottom: 0.5rem; /* Espace sous le métier sur mobile */
+        }
+        @media (min-width: 1024px) {
+            .header-info {
+                margin-bottom: 0; /* Pas d'espace sur desktop */
+            }
+        }
+        .header-name {
+            font-size: 1.25rem; /* Plus petit pour le nom (text-xl) */
+            font-weight: 900;
+            white-space: nowrap; /* Empêche le nom de se couper */
+        }
+        .header-job-title {
+            font-size: 0.875rem; /* Plus petit pour le métier (text-sm) */
+            font-weight: 600;
+            opacity: 0.9;
+            white-space: nowrap; /* Empêche le métier de se couper */
+        }
+        .header-nav {
+            display: none; /* Caché par défaut sur mobile */
+            flex-direction: column; /* Onglets en colonne pour le menu burger */
+            width: 100%;
+            gap: 0.25rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .header-nav.active {
+            display: flex; /* Affiché quand le menu burger est actif */
+        }
+        @media (min-width: 1024px) {
+            .header-nav {
+                display: flex; /* Toujours affiché sur desktop */
+                flex-direction: row; /* Onglets en ligne sur desktop */
+                flex-wrap: nowrap; /* Sur une seule ligne sur desktop */
+                overflow-x: auto; /* Défilement horizontal si trop d'onglets */
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0;
+                border-top: none;
+                width: auto;
+                justify-content: flex-end; /* Aligné à droite sur desktop */
+            }
+        }
+        .menu-toggle {
+            display: block; /* Affiché par défaut sur mobile */
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+        @media (min-width: 1024px) {
+            .menu-toggle {
+                display: none; /* Caché sur desktop */
+            }
+        }
+        /* Keyframe animation for animated titles */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Footer styles */
+        .main-footer {
+            background: linear-gradient(90deg, #FF6B6B, #FF8C00, #D4AF37, #0A2342); /* Dégradé de couleurs identique au header */
+            background-size: 200% 200%;
+            animation: gradient-animation 10s ease infinite; /* Animation plus lente */
+            color: white;
+            padding: 1.5rem; /* Padding réduit pour un footer plus fin */
+            text-align: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+            margin-top: auto; /* Pousse le footer en bas */
+        }
+        .footer-text {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem; /* Espace réduit */
+        }
+        .footer-contact-info {
+            font-size: 0.8rem;
+            opacity: 0.8;
         }
 
         /* Accordion styles (experiences, engagement) */
@@ -52,22 +173,28 @@
             transition: max-height 0.5s ease-out; /* Plus doux */
         }
 
-        /* Tab navigation styles */
+        /* Tab navigation styles - Modernized to "pill" shape */
         .tab-button {
-            padding: 0.75rem 1.25rem;
-            font-weight: 700;
-            border-bottom: 3px solid transparent;
+            padding: 0.4rem 0.8rem; /* Plus petit pour les onglets du header */
+            font-weight: 600;
+            border-radius: 9999px; /* Pill shape */
+            background-color: rgba(255, 255, 255, 0.2); /* Fond semi-transparent pour les onglets du header */
+            color: white; /* Texte blanc pour les onglets du header */
             transition: all 0.3s ease;
-            color: #4a4a4a; /* gris foncé */
+            margin: 0.15rem; /* Espace encore plus réduit */
+            border: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Ombre plus légère */
+            flex-shrink: 0;
+            white-space: nowrap; /* Empêche le texte de se couper */
         }
         .tab-button.active {
-            border-color: #D4AF37; /* Bronze doré pour l'onglet actif */
-            color: #D4AF37; /* Texte de l'onglet actif */
-            background-color: #fdfbf7; /* Fond légèrement différent pour l'onglet actif */
+            background-color: white; /* Blanc pour l'onglet actif */
+            color: #0A2342; /* Bleu nuit pour le texte de l'onglet actif */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Ombre plus prononcée pour actif */
         }
         .tab-button:hover:not(.active) {
-            color: #FF6B6B; /* Rose Orange au survol */
-            background-color: #ffe0e0; /* Fond très léger Rose Orange au survol */
+            background-color: rgba(255, 255, 255, 0.4); /* Plus opaque au survol */
+            color: white; /* Texte blanc au survol */
         }
 
         /* Accent colors */
@@ -99,6 +226,7 @@
         /* Custom scrollbar for better aesthetics */
         ::-webkit-scrollbar {
             width: 8px;
+            height: 8px; /* Hauteur pour les scrollbars horizontales */
         }
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
@@ -164,7 +292,7 @@
             width: calc(100% - 2rem);
             top: 50%; /* Center vertically */
             left: 1rem;
-            transform: translateY(-50%); /* Adjust for vertical centering */
+            transform: translateY(-50%) translateX(0); /* Adjust for vertical centering */
             text-align: center;
             opacity: 0;
             transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Added transform transition */
@@ -174,14 +302,14 @@
         }
         .text-carousel-item.active {
             opacity: 1;
-            transform: translateY(-50%); /* Keep centered when active */
+            transform: translateY(-50%) translateX(0); /* Keep centered when active */
         }
-        .text-carousel-item.inactive-up {
-            transform: translateY(-150%); /* Move further up when inactive */
+        .text-carousel-item.exit-up {
+            transform: translateY(-150%) translateX(0); /* Move further up when inactive */
             opacity: 0;
         }
-        .text-carousel-item.inactive-down {
-            transform: translateY(50%); /* Move from slightly below when inactive */
+        .text-carousel-item.enter-down {
+            transform: translateY(50%) translateX(0); /* Move from slightly below when inactive */
             opacity: 0;
         }
         /* Dynamic colors for carousel items */
@@ -280,11 +408,12 @@
             transition: max-height 0.5s ease-out;
             background-color: #fdfbf7; /* blanc cassé doux */
             border-top: 1px solid #e9e2de;
-            padding-top: 15px;
+            padding-top: 0; /* Adjusted for accordion behavior */
             margin-top: 15px;
         }
         .timeline-details.active {
-            max-height: 500px; /* Adjust as needed */
+            max-height: var(--content-height, 500px); /* Use CSS variable for dynamic height */
+            padding-top: 15px; /* Add padding when active */
         }
         @media screen and (max-width: 768px) {
             .timeline::before {
@@ -374,7 +503,7 @@
             color: #FF8C00; /* Rouge Jaune/Orange */
         }
         .formation-badge.active .badge-skills-list {
-            max-height: 300px; /* Adjust as needed */
+            max-height: var(--badge-content-height, 300px); /* Use CSS variable for dynamic height */
         }
         .formation-badge .toggle-icon {
             font-size: 2rem;
@@ -389,11 +518,6 @@
         }
 
         /* Skills - Interconnected Blocks / Visual Clusters */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
         .competence-section { /* Renamed from skill-box for user's code */
             width: 100%; /* Ensure it takes full grid column width */
             border-radius: 12px;
@@ -569,7 +693,7 @@
             line-height: 1.6;
         }
         .community-accordion-content.active {
-            max-height: 200px; /* Adjust based on content */
+            max-height: var(--community-content-height, 200px); /* Adjust based on content */
             padding-bottom: 1.5rem;
         }
         .community-accordion-content p {
@@ -925,66 +1049,233 @@
             color: #FF8C00;
         }
 
-        /* Styles for Savoir-Être & Savoir-Faire */
-        .savoir-card {
-            background: linear-gradient(45deg, #fdfbf7, #e9e2de); /* Light beige gradient */
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Styles for Savoir-Être & Savoir-Faire (Integrated from mini version) */
+        .skills-section-container { /* Renamed to avoid conflict with main container */
+            padding: 0; /* Remove padding as it's handled by main container */
+            max-width: 100%; /* Take full width of parent tab */
+            width: 100%;
+            margin-left: 0; /* Remove margin */
+            margin-top: 0; /* Remove margin */
+            position: relative; /* For positioning popups */
+            /* overflow-x: hidden; */ /* Handled by main container */
         }
-        .savoir-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        /* Keyframe animation for animated titles */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .savoir-card h3 {
-            color: #0A2342;
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            text-align: center;
+
+        .skills-section-title { /* Renamed for clarity */
+            color: #0A2342; /* Bleu nuit brillant pour les titres */
+            font-weight: 800;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centered as per original CV */
+            margin-bottom: 2rem;
+            font-size: 2rem; /* Adjusted to match other section titles */
         }
-        .savoir-card ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 0.5rem;
+        .skills-intro-text { /* Renamed for clarity */
+            text-align: center; /* Centered as per original CV */
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            color: #616161;
         }
-        .savoir-card ul li {
+        .skills-intro-text b {
+            color: #FF6B6B; /* Rose Orange */
+        }
+
+        /* Styles for skill tags (pastilles) */
+        .skill-tags-container {
+            display: flex;
+            flex-wrap: wrap; /* Permet le retour à la ligne */
+            gap: 0.5rem; /* Espace réduit entre les tags */
+            justify-content: flex-start; /* Alignement à gauche pour les tags */
+            margin-top: 1rem;
+            padding-bottom: 0.5rem; /* Pour éviter que la scrollbar ne cache les tags */
+        }
+        /* Adjusted to add margin between cards */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ensure grid is defined */
+            gap: 1.5rem; /* Gap between soft/hard skills cards */
+        }
+        .skill-card h3 {
+            font-size: 1.5rem; /* Plus gros */
+            font-weight: 800; /* Plus gras */
+            background: linear-gradient(45deg, #FF6B6B, #D4AF37, #0A2342); /* Dégradé de couleurs */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            background-size: 200% 200%; /* Taille du dégradé pour l'animation */
+            animation: gradient-animation 4s ease infinite; /* Animation du dégradé */
+            text-align: left; /* Alignement à gauche */
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #d8c4b7; /* Ligne de séparation plus douce */
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-tag {
+            width: auto; /* Largeur automatique pour le texte */
+            min-width: 80px; /* Largeur minimale pour les tags carrés */
+            height: 35px; /* Hauteur fixe pour les tags carrés */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0.5rem; /* Coins légèrement arrondis pour un aspect carré */
+            font-size: 0.85rem; /* Taille de police plus petite */
+            font-weight: 600;
+            color: white; /* Texte blanc sur fond coloré */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            white-space: nowrap;
             position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.4rem;
-            line-height: 1.5;
+            cursor: pointer;
+            flex-shrink: 0;
+            overflow: hidden; /* Cache le texte débordant */
         }
-        .savoir-card ul li::before {
-            content: '🌟'; /* Star icon */
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .skill-tag-text {
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 0.5rem; /* Padding interne pour le texte */
+        }
+
+        .skill-tag-toggle {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 0.3rem; /* Coins légèrement arrondis pour la croix */
+            width: 1.2rem;
+            height: 100%; /* Prend toute la hauteur du tag */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: auto; /* Pousse la croix à droite */
+        }
+        .skill-tag-toggle:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Harmonized colors for skill tags (Soft Skills) - Nouvelle palette */
+        .tag-soft-color-1 { background-color: #a8dadc; color: #0A2342; } /* Bleu clair doux */
+        .tag-soft-color-2 { background-color: #f7b267; color: #0A2342; } /* Orange doux */
+        .tag-soft-color-3 { background-color: #d4af37; color: white; } /* Bronze doré */
+        .tag-soft-color-4 { background-color: #e9ecef; color: #4a4a4a; } /* Gris très clair */
+
+        /* Harmonized colors for skill tags (Hard Skills) - Nouvelle palette */
+        .tag-hard-color-1 { background-color: #457b9d; color: white; } /* Bleu-gris */
+        .tag-hard-color-2 { background-color: #e63946; color: white; } /* Rouge terre */
+        .tag-hard-color-3 { background-color: #a8dadc; color: #0A2342; } /* Bleu clair doux */
+        .tag-hard-color-4 { background-color: #f7b267; color: #0A2342; } /* Orange doux */
+
+        /* Popup style */
+        .skill-popup {
             position: absolute;
-            left: 0;
-            color: #FF8C00; /* Rouge Jaune/Orange */
+            background-color: #ffffff;
+            border: none; /* Supprime la bordure du popup */
+            border-radius: 0.75rem; /* Coins arrondis pour le popup */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            z-index: 20;
+            max-width: 300px;
+            min-width: 200px; /* Ajout d'une largeur minimale */
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: none; /* Hidden by default */
+            animation: fadeInPopup 0.3s ease-out forwards;
+            word-wrap: break-word; /* Ensure long text wraps */
+        }
+
+        .skill-popup.active {
+            display: block;
+        }
+
+        @keyframes fadeInPopup {
+            from { opacity: 0; transform: translateY(5px) scale(0.95); } /* Effet de rebondi léger */
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Styles for info-dynamic-card (copied from .info-dynamic-card) */
+        .skill-card.soft-skills-bg {
+            background: linear-gradient(45deg, #fdfbf7, #e9e2de); /* Utilise le dégradé des langues/beige */
+            border: 2px solid transparent;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .skill-card.soft-skills-bg:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            border-color: #FF6B6B; /* Rose Orange au survol */
+        }
+        .skill-card.hard-skills-bg {
+            background: linear-gradient(45deg, #fdfbf7, #fff0e0); /* Utilise le dégradé gourmande/orange */
+            border: 2px solid transparent;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .skill-card.hard-skills-bg:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            border-color: #FF6B6B; /* Rose Orange au survol */
+        }
+
+        .skill-card .info-card-overlay-shape {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(212, 175, 55, 0.2); /* Bronze doré translucide */
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .skill-card.soft-skills-bg:hover .info-card-overlay-shape,
+        .skill-card.hard-skills-bg:hover .info-card-overlay-shape {
+            transform: scale(1.5);
+            opacity: 0;
         }
     </style>
 </head>
-<body class="p-4 sm:p-8 flex justify-center items-start min-h-screen">
-    <div class="container-main max-w-5xl w-full p-6 sm:p-10">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl sm:text-5xl font-extrabold section-title mb-2 animated-name">Mathilde Martine PAISLEY</h1>
-            <p class="text-lg sm:text-xl text-gray-600 animated-title animated-blink">Partenaire Stratégique RH, Paie & Transformation Digitale, <b class="accent-bronze">Titulaire CDO</b></p>
-        </header>
+<body>
+    <div class="main-header">
+        <div class="header-content-wrapper">
+            <div class="header-info">
+                <p class="header-name">Mathilde Martine PAISLEY</p>
+                <p class="header-job-title">Chief Digital Officer : RH Paie Transformation Digitale</p>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <nav class="header-nav" id="header-nav">
+                <button class="tab-button active" data-tab="presentation">Accueil & Profil</button>
+                <button class="tab-button" data-tab="experiences">Parcours Pro</button>
+                <button class="tab-button" data-tab="formations">Formations</button>
+                <button class="tab-button" data-tab="competences">Compétences</button>
+                <button class="tab-button" data-tab="informations">Infos Perso</button>
+                <button class="tab-button" data-tab="engagement">Engagement</button>
+                <button class="tab-button" data-tab="contact">Contact</button>
+                <button class="tab-button" data-tab="handicap">Handicap</button>
+                <button class="tab-button" data-tab="realisations">Réalisations</button>
+                <button class="tab-button" data-tab="skills">Soft & Hard Skills</button>
+            </nav>
+        </div>
+    </div>
 
-        <!-- Onglets de navigation -->
-        <nav class="flex flex-wrap justify-center border-b border-e9e2de mb-8">
-            <button class="tab-button active" data-tab="presentation">Accueil & Profil</button>
-            <button class="tab-button" data-tab="experiences">Parcours Professionnel</button>
-            <button class="tab-button" data-tab="formations">Formations & Certifications</button>
-            <button class="tab-button" data-tab="competences">Compétences Clés</button>
-            <button class="tab-button" data-tab="informations">Infos Personnelles</button>
-            <button class="tab-button" data-tab="engagement">Engagement Communautaire</button>
-            <button class="tab-button" data-tab="contact">Me Contacter</button>
-            <button class="tab-button" data-tab="handicap">Engagement Éthique & Handicap</button>
-            <button class="tab-button" data-tab="realisations">Réalisations Clés</button>
-            <button class="tab-button" data-tab="skills">Soft & Hard Skills</button> <!-- NEW TAB (English) -->
-        </nav>
-
+    <div class="container-main max-w-5xl w-full mx-auto p-6 sm:p-10 rounded-lg">
         <!-- Contenu des onglets -->
         <div id="tab-content">
             <!-- Onglet Présentation (Accueil & Profil) -->
@@ -992,43 +1283,7 @@
                 <section class="mb-8">
                     <h2 class="text-2xl sm:text-3xl font-bold section-title mb-4 text-center">Mon Profil en un Coup d'Œil</h2>
                     <div id="text-carousel" class="text-carousel-container">
-                        <!-- Contenu du carrousel mis à jour avec des informations variées -->
-                        <div class="text-carousel-item" data-index="0" data-color="rose">
-                            <span class="text-2xl mr-2">🌟</span> Plus de <b>20 ans d'expérience</b> en RH, Paie et Conseil.
-                        </div>
-                        <div class="text-carousel-item" data-index="1" data-color="orange">
-                            <span class="text-2xl mr-2">🎓</span> <b>Titre certifié Chief Digital Officer (CDO).</b>
-                        </div>
-                        <div class="text-carousel-item" data-index="2" data-color="violet">
-                            <span class="text-2xl mr-2">🚀</span> Pilote la <b>transformation numérique</b> avec vision stratégique et humaine.
-                        </div>
-                        <div class="text-carousel-item" data-index="3" data-color="fuchsia">
-                            <span class="text-2xl mr-2">🔗</span> Fait le lien entre <b>métier RH, réglementation et innovation digitale.</b>
-                        </div>
-                        <div class="text-carousel-item" data-index="4" data-color="bordeaux">
-                            <span class="text-2xl mr-2">📈</span> Garantit la <b>performance durable</b> et diffuse la <b>culture digitale.</b>
-                        </div>
-                        <div class="text-carousel-item" data-index="5" data-color="rose">
-                            <span class="text-2xl mr-2">📄</span> Passionnée par la <b>création de documents interactifs</b> et le mentorat.
-                        </div>
-                        <div class="text-carousel-item" data-index="6" data-color="orange">
-                            <span class="text-2xl mr-2">🍪</span> Adepte de la <b>pâtisserie</b>, de la musique et de la danse.
-                        </div>
-                        <div class="text-carousel-item" data-index="7" data-color="violet">
-                            <span class="text-2xl mr-2">💡</span> En <b>veille technologique</b> constante (Apple, Android).
-                        </div>
-                        <div class="text-carousel-item" data-index="8" data-color="fuchsia">
-                            <span class="text-2xl mr-2">💼</span> Expertise en <b>SIRH, Paie et Droit Social</b>.
-                        </div>
-                        <div class="text-carousel-item" data-index="9" data-color="bordeaux">
-                            <span class="text-2xl mr-2">🤝</span> Créatrice et animatrice de la communauté <b>"Payroll Boss Elite Club"</b>.
-                        </div>
-                        <div class="text-carousel-item" data-index="10" data-color="rose">
-                            <span class="text-2xl mr-2">📚</span> Passionnée de <b>développement personnel et spiritualité</b>.
-                        </div>
-                        <div class="text-carousel-item" data-index="11" data-color="orange">
-                            <span class="text-2xl mr-2">⚙️</span> Monte des PC et s'initie au <b>codage (HTML, CSS, JavaScript)</b>.
-                        </div>
+                        <!-- Les éléments du carrousel seront générés par JavaScript -->
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-8">
@@ -1077,7 +1332,7 @@
                     <!-- Expérience 2 -->
                     <div class="timeline-item right">
                         <div class="timeline-item-content gradient-2"> <!-- Added gradient class -->
-                             <button class="w-full text-left focus:outline-none timeline-toggle" data-target="exp-2">
+                            <button class="w-full text-left focus:outline-none timeline-toggle" data-target="exp-2">
                                 <h3 class="text-lg">COORDONNATRICE SIRH / CHEFFE DE PROJET FONCTIONNELLE</h3>
                                 <p class="date">Sept. 2024 – Nov. 2024</p>
                                 <p class="role">Groupe Ponticelli Frères</p>
@@ -1156,61 +1411,61 @@
                                 <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Détails des expériences :</h4>
                                 <ul class="list-disc list-inside ml-4 space-y-2">
                                     <li><b>Chargé de Paie</b> - Mai 2018 - Octobre 2018 - Paris La Défense
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie pour diverses entités.</li>
                                             <li>Mes Missions : Traitement des paies, déclarations sociales, support aux collaborateurs.</li>
                                         </ul>
                                     </li>
                                     <li><b>Chargée de Paie</b> - Avril 2017 - Avril 2018 - Nexans (92)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie et administration du personnel.</li>
                                             <li>Mes Missions : Suivi des dossiers, calcul des paies, conformité légale.</li>
                                         </ul>
                                     </li>
                                     <li><b>Chargée de Paie (Multi-conventions)</b> - Septembre 2015 - Mars 2017 - ADP GSI France (92)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie pour un portefeuille clients multi-conventions.</li>
                                             <li>Mes Missions : Expertise multi-conventions, gestion des spécificités paie, conseil clients.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Octobre 2014 - Juillet 2015 - Sanofi (45)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestionnaire de paie au sein d'un grand groupe pharmaceutique.</li>
                                             <li>Mes Missions : Préparation et vérification des paies, gestion des absences, interface RH.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Mars 2012 - Juin 2013 - SCC (92)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie et des déclarations sociales.</li>
                                             <li>Mes Missions : Traitement mensuel des paies, suivi des évolutions légales, reporting.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Janvier 2012 - Février 2012 - Alcoa Howmet (92)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Intérim en gestion de paie.</li>
                                             <li>Mes Missions : Support temporaire sur les processus de paie.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Octobre 2011 - Décembre 2011 - Gérard Darel (75)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie pour le secteur du prêt-à-porter.</li>
                                             <li>Mes Missions : Traitement des salaires, gestion des spécificités du secteur.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Août 2011 - Septembre 2011 - Beckman Coulter (95)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Support en gestion de paie.</li>
                                             <li>Mes Missions : Assistance sur les opérations de paie.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Mars 2011 - Juillet 2011 - Publicis (92)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestion de la paie au sein d'une agence de communication.</li>
                                             <li>Mes Missions : Traitement des paies, gestion des spécificités du secteur.</li>
                                         </ul>
                                     </li>
                                     <li><b>Gestionnaire de Paie</b> - Mai 2010 - Janvier 2011 - Sanofi-Aventis (60)
-                                        <ul class="list-circle list-inside ml-4">
+                                        <ul class="list-disc list-inside ml-4">
                                             <li>Mon Rôle : Gestionnaire de paie pour le groupe pharmaceutique.</li>
                                             <li>Mes Missions : Préparation et contrôle des paies, interface avec les RH.</li>
                                         </ul>
@@ -1308,7 +1563,7 @@
             <!-- Onglet Compétences Clés (Visual Clusters) -->
             <div id="competences" class="tab-pane hidden">
                 <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Compétences Clés</h2>
-                <div class="skills-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> <!-- Changement ici pour la grille 2x2 -->
                     <div class="competence-section section-1">
                         <h2>Stratégie & Transformation Digitale</h2>
                         <ul>
@@ -1348,8 +1603,8 @@
                             <li>Rédaction de <b>Livres Blancs Réglementaires</b>.</li>
                         </ul>
                     </div>
-                     <!-- Combined section for Outils Bureautiques & Collaboration -->
-                    <div class="competence-section col-span-1 lg:col-span-2 section-5">
+                    <!-- Combined section for Outils Bureautiques & Collaboration - Reste seul en bas -->
+                    <div class="competence-section col-span-1 md:col-span-2 section-5">
                         <h2>Outils Bureautiques & Collaboration</h2>
                         <div class="flex flex-wrap justify-center gap-4 mt-6">
                             <span class="skill-tag-item">Suite Office 365</span>
@@ -1475,7 +1730,7 @@
                                     <p>Animation des discussions, structuration du contenu et encouragement à la pratique pour développer la confiance et l'autonomie des membres.</p>
                                 </div>
                             </div>
-                             <!-- Nouvelle 5ème étape : Création de documents interactifs -->
+                            <!-- Nouvelle 5ème étape : Création de documents interactifs -->
                             <div class="community-accordion-item">
                                 <div class="community-accordion-header">
                                     <span class="icon">📄</span> Création de documents interactifs
@@ -1489,7 +1744,7 @@
                         </div>
                         <p class="info-card-text mt-4">
                             La communauté est accessible via :
-                            <div class="flex justify-center mt-4">
+                            <div class="flex justify-center mt-4 flex-wrap gap-2">
                                 <a href="https://chat.whatsapp.com/EtV0ux5ipAG5JDhopzo0ut" target="_blank" class="social-logo-button whatsapp">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.5 3.45 1.46 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm.04 18.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.81-1.26-1.25-2.73-1.25-4.28C3.99 7.5 7.5 3.99 12.04 3.99c3.98 0 7.23 3.25 7.23 7.23 0 3.98-3.25 7.23-7.23 7.23zm4.52-6.12c-.25-.12-.92-.46-1.06-.51-.15-.05-.29-.05-.42.05-.14.1-.54.51-.66.65-.12.14-.25.15-.49.07-.23-.08-.97-.36-1.85-.92-.69-.45-1.15-.8-1.28-1.03-.13-.2-.01-.31.09-.41.09-.09.2-.23.29-.34.09-.1.12-.18.18-.31.06-.13.03-.24-.01-.34-.04-.1-.42-1.02-.58-1.39-.15-.36-.3-.31-.42-.32h-.4c-.14-.01-.36-.01-.54.1-.18.11-.69.68-.69 1.67 0 .99.71 1.93.81 2.06.1.14 1.39 2.13 3.38 2.9.47.18.84.29 1.13.37.49.14.7.12.96.08.27-.05.89-.36 1.02-.71.13-.35.13-.65.09-.71-.05-.06-.15-.1-.28-.16z"/></svg>
                                     WhatsApp
@@ -1709,7 +1964,7 @@
                     </div>
                     <div class="realisations-accordion-content">
                         <ul>
-                            <li><b>Gestion Globale de la Paie :</b> Responsable de la paie pour 250 à 1200 collaborateurs.</li>
+                            <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
                             <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
                             <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
                             <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
@@ -1737,165 +1992,251 @@
                 </div>
             </div>
 
-            <!-- NOUVEL ONGLET : Soft & Hard Skills (en anglais) -->
+            <!-- Onglet Soft & Hard Skills (Intégré avec le nouveau design) -->
             <div id="skills" class="tab-pane hidden">
-                <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Soft & Hard Skills</h2>
-                <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                    My personality and interpersonal skills are major assets for the success of your projects.
+                <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
+                <p class="skills-intro-text">
+                    Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
                 </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="savoir-card">
+                <div class="skills-grid">
+                    <div class="skill-card soft-skills-bg p-6 rounded-lg">
+                        <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
                         <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Natural leadership and ability to motivate teams.</li>
-                            <li>Excellent communication and active listening skills.</li>
-                            <li>Analytical and synthesis mindset.</li>
-                            <li>Rigor and organization.</li>
-                            <li>Adaptability and flexibility.</li>
-                            <li>Proactivity and strong proposal skills.</li>
-                            <li>Results-oriented and service-minded.</li>
-                            <li>Creativity and innovation.</li>
-                        </ul>
+                        <div class="skill-tags-container">
+                            <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
+                                <span class="skill-tag-text">Leadership naturel</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
+                                <span class="skill-tag-text">Communication</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
+                                <span class="skill-tag-text">Analyse & Synthèse</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
+                                <span class="skill-tag-text">Rigueur</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
+                                <span class="skill-tag-text">Adaptabilité</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
+                                <span class="skill-tag-text">Proactivité</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
+                                <span class="skill-tag-text">Orientée résultats</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
+                                <span class="skill-tag-text">Créativité</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                        </div>
                     </div>
-                    <div class="savoir-card">
+                    <div class="skill-card hard-skills-bg p-6 rounded-lg">
+                        <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
                         <h3>Hard Skills</h3>
-                        <ul>
-                            <li>Complex project management.</li>
-                            <li>Payroll management and HR administration.</li>
-                            <li>Proficiency in HRIS tools (SAP SF, HR Access, Cegid...).</li>
-                            <li>Change management and training.</li>
-                            <li>Regulatory and technological watch.</li>
-                            <li>Optimization of HR and Payroll processes.</li>
-                            <li>Management of multidisciplinary teams.</li>
-                            <li>Writing technical and functional documentation.</li>
-                        </ul>
+                        <div class="skill-tags-container">
+                            <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
+                                <span class="skill-tag-text">Gestion de projets</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
+                                <span class="skill-tag-text">Paie & Admin RH</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
+                                <span class="skill-tag-text">Outils SIRH</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
+                                <span class="skill-tag-text">Gestion du changement</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
+                                <span class="skill-tag-text">Veille réglementaire</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de solutions pour améliorer l'efficacité chez Talent Solutions." id="hard-skill-6">
+                                <span class="skill-tag-text">Optimisation processus</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
+                                <span class="skill-tag-text">Management équipes</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                            <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
+                                <span class="skill-tag-text">Rédaction de specs</span>
+                                <span class="skill-tag-toggle">✕</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <footer class="main-footer">
+        <p class="footer-text">© 2025 Mathilde Martine PAISLEY - Chief Digital Officer : RH Paie Transformation Digitale</p>
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3PasEF32i8CmDVpWW0khLTO5IVNNxrSeu6fgqV5hk1sHDErGlpKRMAfdDfmFgQEtaZ8WPUpqcJ?gv=true',
+                    color: '#D81B60',
+                    label: 'Réserver un rendez-vous',
+                    target,
+                });
+            });
+        })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
+    </footer>
+
     <script>
+        let activePopup = null; // Declare activePopup in a higher scope
+
         document.addEventListener('DOMContentLoaded', function() {
+            // Logic for header menu toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const headerNav = document.getElementById('header-nav');
+
+            menuToggle.addEventListener('click', () => {
+                headerNav.classList.toggle('active');
+            });
+
             // Logic for tabs
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabPanes = document.querySelectorAll('.tab-pane');
 
+            function activateTab(targetTab) {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.add('hidden'));
+
+                const activeButton = document.querySelector(`.tab-button[data-tab="${targetTab}"]`);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+                const activePane = document.getElementById(targetTab);
+                if (activePane) {
+                    activePane.classList.remove('hidden');
+                }
+
+                // Close mobile menu if open
+                if (headerNav.classList.contains('active')) {
+                    headerNav.classList.remove('active');
+                }
+
+                // Reset specific elements if tab contains them
+                // Close all accordions in 'experiences'
+                document.querySelectorAll('#experiences .timeline-details.active').forEach(detail => {
+                    detail.classList.remove('active');
+                    detail.style.maxHeight = null;
+                    const icon = detail.previousElementSibling.querySelector('span:last-child');
+                    if (icon) icon.textContent = '+';
+                });
+
+                // Close all accordions in 'formations'
+                document.querySelectorAll('#formations .formation-badge.active').forEach(badge => {
+                    badge.classList.remove('active');
+                    const skillsList = document.getElementById(badge.dataset.target);
+                    if (skillsList) skillsList.style.maxHeight = null;
+                    const toggleIcon = badge.querySelector('.toggle-icon');
+                    if (toggleIcon) toggleIcon.textContent = '+';
+                });
+
+                // Close all accordions in 'engagement'
+                document.querySelectorAll('#engagement .community-accordion-header.active').forEach(header => {
+                    header.classList.remove('active');
+                    header.nextElementSibling.classList.remove('active');
+                    header.nextElementSibling.style.maxHeight = null;
+                    header.querySelector('.toggle-icon').textContent = '+';
+                });
+
+                // Close all accordions in 'handicap'
+                document.querySelectorAll('#handicap .community-accordion-header.active').forEach(header => {
+                    header.classList.remove('active');
+                    header.nextElementSibling.classList.remove('active');
+                    header.nextElementSibling.style.maxHeight = null;
+                    header.querySelector('.toggle-icon').textContent = '+';
+                });
+
+                // Close all accordions in 'realisations'
+                document.querySelectorAll('#realisations .realisations-accordion-item.active').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.realisations-accordion-content').style.maxHeight = null;
+                    const toggleIcon = item.querySelector('.realisations-accordion-toggle-icon');
+                    if (toggleIcon) toggleIcon.textContent = '+';
+                });
+
+                // Close any open skill popups when switching away from the skills tab
+                if (activePopup) {
+                    closeAllPopups();
+                }
+            }
+
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabPanes.forEach(pane => pane.classList.add('hidden'));
+                    activateTab(this.dataset.tab);
+                });
+            });
 
-                    this.classList.add('active');
-                    const targetTab = this.dataset.tab;
-                    const activePane = document.getElementById(targetTab);
-                    if (activePane) { // Check if activePane exists before trying to remove 'hidden'
-                        activePane.classList.remove('hidden');
-                    }
+            // Logic for all accordions (timeline, formations, community, handicap, realisations)
+            function setupAccordion(selector, contentSelector, toggleIconSelector) {
+                document.querySelectorAll(selector).forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Corrected line: Prioritize data-target, then nextElementSibling
+                        const content = document.getElementById(this.dataset.target) || this.nextElementSibling;
+                        const toggleIcon = this.querySelector(toggleIconSelector);
+                        const parentItem = this.closest('.timeline-item') || this.closest('.formation-badge') || this.closest('.community-accordion-item') || this.closest('.realisations-accordion-item');
 
+                        // Close all other open accordions in the same tab
+                        const parentTabPane = parentItem.closest('.tab-pane');
+                        if (parentTabPane) {
+                            parentTabPane.querySelectorAll(selector).forEach(otherButton => {
+                                if (otherButton !== this) {
+                                    const otherContent = document.getElementById(otherButton.dataset.target) || otherButton.nextElementSibling; // Apply same correction here
+                                    const otherToggleIcon = otherButton.querySelector(toggleIconSelector);
+                                    const otherParentItem = otherButton.closest('.timeline-item') || otherButton.closest('.formation-badge') || otherButton.closest('.community-accordion-item') || otherButton.closest('.realisations-accordion-item');
 
-                    // Initialize specific elements if tab contains them
-                    if (targetTab === 'presentation') {
-                        // No radar chart on presentation anymore, replaced by contact cards
-                    } else if (targetTab === 'experiences') {
-                        // Reset timeline details on tab switch
-                        document.querySelectorAll('.timeline-details').forEach(detail => {
-                            detail.classList.remove('active');
-                            const icon = detail.previousElementSibling.querySelector('span:last-child');
-                            if (icon) icon.textContent = '+';
-                        });
-                    } else if (targetTab === 'realisations') {
-                        // Reset realisations accordions on tab switch
-                        document.querySelectorAll('.realisations-accordion-item').forEach(item => {
-                            item.classList.remove('active');
-                            const toggleIcon = item.querySelector('.realisations-accordion-toggle-icon');
+                                    if (otherParentItem && otherParentItem.classList.contains('active')) {
+                                        otherParentItem.classList.remove('active');
+                                        if (otherContent) otherContent.style.maxHeight = null;
+                                        if (otherToggleIcon) otherToggleIcon.textContent = '+';
+                                    }
+                                }
+                            });
+                        }
+
+                        // Toggle current accordion
+                        parentItem.classList.toggle('active');
+                        if (parentItem.classList.contains('active')) {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            if (toggleIcon) toggleIcon.textContent = '-';
+                        } else {
+                            content.style.maxHeight = null;
                             if (toggleIcon) toggleIcon.textContent = '+';
-                        });
-                    }
-                });
-            });
-
-            // Logic for timeline accordions (inside 'Parcours Professionnel' tab)
-            document.querySelectorAll('.timeline-toggle').forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.dataset.target;
-                    const targetDetails = document.getElementById(targetId);
-                    const icon = this.querySelector('span:last-child');
-
-                    // Close other open timeline details in the same tab
-                    document.querySelectorAll('.timeline-details.active').forEach(openDetail => {
-                        if (openDetail.id !== targetId) {
-                            openDetail.classList.remove('active');
-                            const otherIcon = openDetail.previousElementSibling.querySelector('span:last-child');
-                            if (otherIcon) otherIcon.textContent = '+';
                         }
                     });
-
-                    // Toggle current timeline detail
-                    if (targetDetails.classList.contains('active')) {
-                        targetDetails.classList.remove('active');
-                        icon.textContent = '+';
-                    } else {
-                        targetDetails.classList.add('active');
-                        icon.textContent = '-';
-                    }
                 });
-            });
+            }
 
-
-            // Logic for Formation Badges - Toggle Skills List
-            document.querySelectorAll('.formation-badge').forEach(badge => {
-                badge.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    const skillsList = document.getElementById(this.dataset.target);
-                    if (skillsList.style.maxHeight) {
-                        skillsList.style.maxHeight = null;
-                        this.querySelector('.toggle-icon').textContent = '+';
-                    } else {
-                        // Close other open skill lists
-                        document.querySelectorAll('.formation-badge.active').forEach(otherBadge => {
-                            if (otherBadge !== this) {
-                                otherBadge.classList.remove('active');
-                                document.getElementById(otherBadge.dataset.target).style.maxHeight = null;
-                                otherBadge.querySelector('.toggle-icon').textContent = '+';
-                            }
-                        });
-                        skillsList.style.maxHeight = skillsList.scrollHeight + "px";
-                        this.querySelector('.toggle-icon').textContent = 'x'; // Change to 'x' when open
-                    }
-                });
-            });
-
-            // Logic for Community Accordion
-            document.querySelectorAll('.community-accordion-header').forEach(header => {
-                header.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const toggleIcon = this.querySelector('.toggle-icon');
-
-                    // Close all other accordions
-                    document.querySelectorAll('.community-accordion-header').forEach(otherHeader => {
-                        if (otherHeader !== this && otherHeader.classList.contains('active')) {
-                            otherHeader.classList.remove('active');
-                            otherHeader.nextElementSibling.classList.remove('active');
-                            otherHeader.querySelector('.toggle-icon').textContent = '+';
-                        }
-                    });
-
-                    // Toggle current accordion
-                    this.classList.toggle('active');
-                    content.classList.toggle('active');
-                    if (this.classList.contains('active')) {
-                        toggleIcon.textContent = '-';
-                    } else {
-                        toggleIcon.textContent = '+';
-                    }
-                });
-            });
-
+            // Setup for different accordion types
+            setupAccordion('.timeline-toggle', '.timeline-details', 'span:last-child');
+            setupAccordion('.formation-badge', '.badge-skills-list', '.toggle-icon');
+            setupAccordion('.community-accordion-header', '.community-accordion-content', '.toggle-icon');
+            setupAccordion('.realisations-accordion-header', '.realisations-accordion-content', '.realisations-accordion-toggle-icon');
 
             // Vertical Text Carousel Logic
-            const carouselContainer = document.querySelector('.text-carousel-container');
+            const carouselContainer = document.querySelector('#text-carousel');
             let currentIndex = 0;
             const messages = [
                 { text: '<span class="text-2xl mr-2">🌟</span> Plus de <b>20 ans d\'expérience</b> en RH, Paie et Conseil.', color: 'rose' },
@@ -1909,44 +2250,156 @@
                 { text: '<span class="text-2xl mr-2">💼</span> Expertise en <b>SIRH, Paie et Droit Social</b>.', color: 'fuchsia' },
                 { text: '<span class="text-2xl mr-2">🤝</span> Créatrice et animatrice de la communauté <b>"Payroll Boss Elite Club"</b>.', color: 'bordeaux' },
                 { text: '<span class="text-2xl mr-2">📚</span> Passionnée de <b>développement personnel et spiritualité</b>.', color: 'rose' },
-                { text: '<span class="text-2xl mr-2">⚙️</span> Monte des PC et s\'initie au <b>codage (HTML, CSS, JavaScript)</b>.', color: 'orange' }
+                { text: '<span class="text-2xl mr-2">⚙️</span> Monte des PC et s\'initie au <b>codage (HTML, CSS, JavaScript)</b>.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🎯</span> Maîtrise des <b>méthodologies Agile et Scrum</b> pour la gestion de projet.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">📊</span> Forte compétence en <b>analyse de données RH et reporting</b>.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🔒</span> Sensibilisation et expertise en <b>cybersécurité</b> appliquée aux systèmes RH.', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">✨</span> Conception centrée utilisateur pour une <b>expérience digitale optimale (UX)</b>.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🗣️</span> Excellentes compétences en <b>communication et prise de parole en public</b>.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🌍</span> Gestion et animation d\'équipes dans des <b>contextes multiculturels</b>.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">⚖️</span> Expertise en <b>gouvernance des données</b> et conformité RGPD.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🌱</span> Engagement pour le <b>développement durable</b> et l\'innovation responsable.', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">💡</span> Capacité à transformer les défis en <b>opportunités d\'innovation</b>.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🔄</span> Favorise l\'<b>apprentissage continu</b> et le développement des compétences.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🌐</span> Développe des <b>réseaux professionnels</b> solides et des partenariats stratégiques.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">💖</span> Approche <b>humaine et empathique</b> dans toutes les interactions professionnelles.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🛠️</span> Expertise en <b>optimisation des processus</b> et amélioration continue.', color: 'bordeaux' }
             ];
 
-            function showNextMessage() {
-                // Hide current item by moving it up and fading out
-                const currentActiveItem = carouselContainer.querySelector('.text-carousel-item.active');
-                if (currentActiveItem) {
-                    currentActiveItem.classList.remove('active');
-                    currentActiveItem.classList.add('inactive-up'); // Add class for moving up and fading out
-                }
-
-                // Calculate next index
-                currentIndex = (currentIndex + 1) % messages.length;
-                const nextMessage = messages[currentIndex];
-                
-                // Create new element for the next message
+            // Create all carousel items initially
+            messages.forEach((msg, index) => {
                 const messageElement = document.createElement('div');
-                messageElement.classList.add('text-carousel-item', 'inactive-down'); // Start from bottom, faded out
-                messageElement.innerHTML = nextMessage.text;
-                messageElement.setAttribute('data-color', nextMessage.color); // Set data-color attribute
-                messageElement.setAttribute('data-index', currentIndex); // Re-add data-index for potential future use
-
-                // Append and then activate to trigger animation
+                messageElement.classList.add('text-carousel-item');
+                messageElement.innerHTML = msg.text;
+                messageElement.setAttribute('data-color', msg.color);
+                messageElement.setAttribute('data-index', index);
                 carouselContainer.appendChild(messageElement);
-                setTimeout(() => {
-                    messageElement.classList.remove('inactive-down');
-                    messageElement.classList.add('active');
-                }, 50); // Small delay to allow initial render before animation
+            });
+
+            const carouselItems = document.querySelectorAll('.text-carousel-item');
+
+            function showNextMessage() {
+                // Remove previous active state
+                carouselItems.forEach(item => item.classList.remove('active', 'exit-up', 'enter-down'));
+
+                // Set previous item to exit upwards
+                const prevIndex = (currentIndex - 1 + messages.length) % messages.length;
+                carouselItems[prevIndex].classList.add('exit-up');
+
+                // Set current item to active
+                carouselItems[currentIndex].classList.add('active');
+
+                // Update index for next message
+                currentIndex = (currentIndex + 1) % messages.length;
             }
 
             // Show the first message immediately
-            // showNextMessage(); // This will show the first message
-            // Carousel is disabled for now, uncomment the line above to re-enable
-            // setInterval(showNextMessage, 4000); // Change message every 4 seconds
+            showNextMessage();
+            // Change message every 4 seconds
+            setInterval(showNextMessage, 4000);
 
             // Initialize the presentation tab and animations on load
-            document.querySelector('.tab-button[data-tab="presentation"]').click();
-            // The initial showNextMessage() handles the first item activation.
+            activateTab('presentation');
+
+            // --- Logic for Skill Popups (Copied from mini version) ---
+            const skillTags = document.querySelectorAll('.skill-tag');
+            
+
+            // Fonction pour fermer tous les popups
+            function closeAllPopups() {
+                if (activePopup) {
+                    activePopup.classList.remove('active');
+                    // Remove the popup from the DOM after animation
+                    activePopup.addEventListener('animationend', function handler() {
+                        activePopup.remove();
+                        activePopup.removeEventListener('animationend', handler);
+                    });
+                    activePopup = null;
+                }
+            }
+
+            skillTags.forEach(tag => {
+                const toggleButton = tag.querySelector('.skill-tag-toggle');
+                const fullText = tag.dataset.fullText; // Récupère le texte complet
+
+                // Assurez-vous que chaque tag a un ID unique
+                if (!tag.id) {
+                    tag.id = `skill-tag-${Math.random().toString(36).substr(2, 9)}`;
+                }
+
+                toggleButton.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+
+                    const skillCard = this.closest('.skill-card'); // Get the parent skill-card
+                    const containerMain = document.querySelector('.container-main'); // Get the main container
+
+                    // If a popup is already open for this tag, close it
+                    const existingPopup = document.getElementById(`popup-${tag.id}`);
+                    if (existingPopup && existingPopup.classList.contains('active')) {
+                        closeAllPopups();
+                        return;
+                    }
+
+                    // Close any other active popup before opening a new one
+                    if (activePopup && activePopup.dataset.tagId !== tag.id) {
+                        closeAllPopups();
+                    }
+
+                    // Create the popup
+                    const popup = document.createElement('div');
+                    popup.classList.add('skill-popup');
+                    popup.id = `popup-${tag.id}`; // Associate the popup with the tag's ID
+                    popup.dataset.tagId = tag.id; // Store the tag's ID in the popup's dataset
+                    
+                    // Add an emoji and introduction text
+                    popup.innerHTML = `<p>💡 <b>Détail de la compétence :</b></p><p>${fullText}</p>`;
+                    
+                    // Append to the main container, which is relatively positioned
+                    containerMain.appendChild(popup);
+
+                    // Position the popup relative to the clicked tag
+                    const tagRect = tag.getBoundingClientRect();
+                    const containerMainRect = containerMain.getBoundingClientRect();
+
+                    let popupLeft = tagRect.right - containerMainRect.left + 10; // 10px margin to the right
+                    let popupTop = tagRect.top - containerMainRect.top;
+
+                    // Adjust for horizontal overflow
+                    if (popupLeft + popup.offsetWidth > containerMainRect.width - 10) { // If overflows right
+                        popupLeft = tagRect.left - containerMainRect.left - popup.offsetWidth - 10; // Position to the left
+                        if (popupLeft < 10) { // If overflows left as well
+                            popupLeft = 10; // Align to left edge of container
+                            popup.style.maxWidth = `${containerMainRect.width - 20}px`; // Max width within container
+                        }
+                    }
+
+                    // Adjust for vertical overflow (bottom)
+                    if (popupTop + popup.offsetHeight > containerMainRect.height - 10) {
+                        popupTop = containerMainRect.height - popup.offsetHeight - 10; // Push up from bottom
+                        if (popupTop < 10) { // If still overflows top (very tall popup)
+                            popupTop = 10; // Align to top edge of container
+                            popup.style.maxHeight = `${containerMainRect.height - 20}px`; // Limit height
+                            popup.style.overflowY = 'auto'; // Make scrollable
+                        }
+                    }
+
+
+                    popup.style.left = `${popupLeft}px`;
+                    popup.style.top = `${popupTop}px`;
+                    
+                    popup.classList.add('active');
+                    activePopup = popup; // Set this popup as active
+                });
+            });
+
+            // Close the popup if clicking outside of it or a skill-tag-toggle button
+            document.addEventListener('click', function(event) {
+                if (activePopup && !activePopup.contains(event.target) && !event.target.closest('.skill-tag-toggle')) {
+                    closeAllPopups();
+                }
+            });
+
+            // --- End of Skill Popups logic ---
         });
     </script>
 </body>
