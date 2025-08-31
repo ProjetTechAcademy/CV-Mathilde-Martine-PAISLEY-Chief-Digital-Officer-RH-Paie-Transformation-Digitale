@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathilde Martine PAISLEY – RH Paie Transformation Digitale</title>
+    <title>Mathilde Martine PAISLEY – Chief Digital Officer | RH & Paie | Transformation Digitale</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -732,21 +732,7 @@
             0%, 100% { transform: translateY(0) scale(1.05); }
             50% { transform: translateY(-5px) scale(1.1); }
         }
-        .download-cv-button {
-            background: linear-gradient(45deg, #D4AF37, #FF8C00);
-            padding: 1rem 2rem;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 9999px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-top: 2rem;
-        }
-        .download-cv-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
+
         /* START NEW Contact Section Styles - Directly from user's provided code, adapted for existing font */
         .contact-container {
             display: flex;
@@ -811,13 +797,6 @@
             align-items: center;
             gap: 25px;
         }
-        @media (min-width: 768px) {
-            .contact-cards-grid {
-                flex-direction: row; /* display cards in a row on desktop */
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-        }
 
         .contact-card { /* Renamed from .card to avoid conflict */
             width: 100%;
@@ -833,7 +812,6 @@
         .contact-card.card-phone .contact-card-content { background: linear-gradient(45deg, #fdfbf7, #ffe0e0); } /* Light rose tint */
         .contact-card.card-email .contact-card-content { background: linear-gradient(45deg, #fdfbf7, #fffbe0); } /* Light yellow tint */
         .contact-card.card-address .contact-card-content { background: linear-gradient(45deg, #fdfbf7, #e0f2f7); } /* Light blue tint */
-        .contact-card.card-cv .contact-card-content { background: linear-gradient(45deg, #fdfbf7, #f0e6ff); } /* Light purple tint for CV */
         
         .contact-card::before { /* Gradient border */
             content: '';
@@ -1055,12 +1033,18 @@
             margin-bottom: 0.4rem;
             line-height: 1.5;
         }
+        .realisations-accordion-content ul li::before {
+            content: '✅'; /* Checkmark icon */
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+        }
         .realisations-accordion-content ul ul li::before {
             content: '➡️'; /* Arrow icon for nested lists */
             color: #FF8C00;
         }
 
-        /* Styles for Savoir-Être & Savoir-Faire (Integrated with the new design) */
+        /* Styles for Savoir-Être & Savoir-Faire (Integrated from mini version) */
         .skills-section-container { /* Renamed to avoid conflict with main container */
             padding: 0; /* Remove padding as it's handled by main container */
             max-width: 100%; /* Take full width of parent tab */
@@ -1276,7 +1260,7 @@
         <div class="header-content-wrapper">
             <div class="header-info">
                 <p class="header-name">Mathilde Martine PAISLEY</p>
-                <p class="header-job-title">RH Paie Transformation Digitale</p>
+                <p class="header-job-title">Chief Digital Officer : RH Paie Transformation Digitale</p>
             </div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
             <nav class="header-nav" id="header-nav">
@@ -1286,10 +1270,10 @@
                 <a class="tab-button" href="#competences-section">Compétences</a>
                 <a class="tab-button" href="#informations-section">Infos Perso</a>
                 <a class="tab-button" href="#engagement-section">Engagement</a>
+                <a class="tab-button" href="#contact-section">Contact</a>
                 <a class="tab-button" href="#handicap-section">Handicap</a>
                 <a class="tab-button" href="#realisations-section">Réalisations</a>
                 <a class="tab-button" href="#skills-section">Soft & Hard Skills</a>
-                <a class="tab-button" href="#contact-section">Contact</a>
             </nav>
         </div>
     </div>
@@ -1300,14 +1284,22 @@
         <!-- Section Présentation (Accueil & Profil) -->
         <div id="presentation-section" class="section-container">
             <h2 class="text-2xl sm:text-3xl font-bold section-title mb-4 text-center">Mon Profil en un Coup d'Œil</h2>
+            <div id="text-carousel" class="text-carousel-container">
+                <!-- Les éléments du carrousel seront générés par JavaScript -->
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-8">
                 <div class="text-gray-700 leading-relaxed text-justify">
-                    <h3 class="text-xl font-bold section-title text-center mb-4">RH Paie Transformation Digitale</h3>
                     <p class="mb-4">
-                        Forte de plus de 20 ans d'expérience passionnante en Ressources Humaines, je me positionne aujourd'hui comme une Partenaire Stratégique au service de la transformation digitale des organisations.
+                        Je me positionne comme une <b class="text-peps-rose-orange">Partenaire Stratégique RH, Paie & Transformation Digitale</b>. Avec ma nouvelle certification de <b class="accent-bronze">Chief Digital Officer (CDO)</b>, j'apporte désormais une vision globale et une capacité à piloter la transformation numérique des organisations.
                     </p>
                     <p class="mb-4">
-                        Ma force ? Créer du lien entre le métier RH, la paie et la technologie pour mener à bien des projets SIRH qui ont du sens. Mon approche est résolument humaine et orientée solutions. Je m'assure que chaque projet soutient les équipes, avec pour but de les voir réussir et s'épanouir. Ma récente certification d'Experte en Stratégie Digitale est la touche finale à cette approche.
+                        J'accompagne les entreprises dans la traduction opérationnelle et réglementaire de leurs projets, en m'assurant que la paie et les enjeux RH soient pleinement compris et intégrés. <b class="text-peps-rose-orange">Acteur indispensable de la transformation digitale</b>, je définis et développe la stratégie digitale en intégrant les nouvelles technologies de communication.
+                    </p>
+                    <p class="mb-4">
+                        À la croisée du métier RH, de la maîtrise réglementaire et de la transformation digitale, je sécurise les projets pour qu’ils répondent réellement aux besoins du terrain et soutiennent la performance durable des équipes, en diffusant une <b class="accent-bronze">forte culture digitale</b>. Mon approche est à la fois stratégique, opérationnelle et centrée sur l'humain.
+                    </p>
+                    <p class="font-bold text-lg text-peps-rouge-jaune text-center mt-6">
+                        "La synergie entre l'humain et le digital est la clé d'une transformation réussie."
                     </p>
                 </div>
                 <div class="flex justify-center items-center h-full">
@@ -1765,1925 +1757,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Section Engagement Éthique & Handicap -->
-        <div id="handicap-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Éthique & Handicap</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">♿</span> <!-- Icône pour le handicap -->
-                    <h3 class="info-card-header-title">Engagement pour l'Accessibilité et l'Éthique</h3>
-                    <p class="info-card-text mt-2 text-justify">
-                        En tant que <b>Travailleur Handicapé (RQTH)</b>, la transparence est une valeur essentielle pour moi. J'ai un handicap non-visible qui ne m'empêche en rien de remplir mes missions de façon autonome et rigoureuse.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Aménagements nécessaires :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🪑</span> Chaise et bureau ergonomiques
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un environnement de travail adapté pour garantir le confort et prévenir les troubles musculo-squelettiques.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">⌨️</span> Clavier et souris adaptés
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Des périphériques ergonomiques pour une utilisation prolongée sans gêne.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📝</span> Logiciel de prise de notes
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un outil numérique pour faciliter l'organisation et la mémorisation des informations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4 text-justify">
-                        Ces aménagements sont très courants et simples à mettre en place. Pour accompagner l'employeur dans cette démarche, des solutions d'aide et de subvention sont proposées par l'<b>AGEFIPH</b>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Réalisations Clés -->
-        <div id="realisations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
-            <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
-                tout au long de mon parcours professionnel.
-            </p>
-
-            <div class="realisations-accordion-item gradient-1">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
-                        <span class="period">Décembre 2024 – Mai 2025</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
-                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
-                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
-                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-2">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>CGI – Consultante Fonctionnelle</h3>
-                        <span class="period">Janvier 2023 à juin 2024</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
-                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
-                    <ul>
-                        <li>Rédaction précise des scripts de tests.</li>
-                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
-                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
-                        <li>Détection proactive, qualification et correction des anomalies.</li>
-                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
-                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
-                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
-                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
-                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
-                    </ul>
-
-                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
-                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
-                    <ul>
-                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
-                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
-                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
-                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-3">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Talent Solutions - Chargée RH</h3>
-                        <span class="period">Juillet 2022 à décembre 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs.</li>
-                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
-                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-4">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
-                        <span class="period">Novembre 2018 à mars 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
-                    <ul>
-                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
-                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
-                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
-                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
-                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
-                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
-                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
-                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
-                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-5">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Multi Sociétés - Chargée de Paie</h3>
-                        <span class="period">Avril 2008 à octobre 2018</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
-                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
-                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
-                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-6">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>KFC - Directrice de Centre de Profit</h3>
-                        <span class="period">Avril 2002 à mars 2004</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
-                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
-                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
-                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
-        <div id="skills-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
-            <p class="skills-intro-text">
-                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card soft-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
-                            <span class="skill-tag-text">Leadership naturel</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
-                            <span class="skill-tag-text">Communication</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
-                            <span class="skill-tag-text">Analyse & Synthèse</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
-                            <span class="skill-tag-text">Rigueur</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
-                            <span class="skill-tag-text">Adaptabilité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
-                            <span class="skill-tag-text">Proactivité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
-                            <span class="skill-tag-text">Orientée résultats</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
-                            <span class="skill-tag-text">Créativité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="skill-card hard-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Hard Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
-                            <span class="skill-tag-text">Gestion de projets</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
-                            <span class="skill-tag-text">Paie & Admin RH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
-                            <span class="skill-tag-text">Outils SIRH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
-                            <span class="skill-tag-text">Gestion du changement</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
-                            <span class="skill-tag-text">Veille réglementaire</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs chez Talent Solutions." id="hard-skill-6">
-                            <span class="skill-tag-text">Optimisation processus</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
-                            <span class="skill-tag-text">Management équipes</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
-                            <span class="skill-tag-text">Rédaction de specs</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Informations Personnelles (Dynamic Cards with Illustrations) -->
-        <div id="informations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Infos Personnelles</h2>
-            <div class="info-category-grid">
-                <!-- Langues -->
-                <div class="info-dynamic-card langues">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🗣️</span>
-                    <h3 class="info-card-header-title">Langues</h3>
-                    <p class="info-card-text"><b class="skill-emphasis">Français</b> (langue maternelle)</p>
-                    <p class="info-card-text"><b class="skill-emphasis">Anglais</b> (A2 - compréhension technique)</p>
-                </div>
-
-                <!-- Création Gourmande -->
-                <div class="info-dynamic-card gourmande">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🍪</span>
-                    <h3 class="info-card-header-title">Création Gourmande</h3>
-                    <p class="info-card-text">J'organise des événements (traiteur, amuse-bouches) et je suis passionnée de pâtisserie.</p>
-                    <p class="info-card-text">Je suis spécialisée dans la création de recettes originales, notamment les cookies.</p>
-                </div>
-
-                <!-- Harmonie Musicale -->
-                <div class="info-dynamic-card musicale">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🎶</span>
-                    <h3 class="info-card-header-title">Harmonie Musicale</h3>
-                    <p class="info-card-text">Je suis passionnée de musique classique (piano), afro-antillaise (rétro 80's), et de variété (Michael Jackson, Madonna).</p>
-                </div>
-
-                <!-- Danse & Bien-être -->
-                <div class="info-dynamic-card danse">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💃</span>
-                    <h3 class="info-card-header-title">Danse & Bien-être</h3>
-                    <p class="info-card-text">Je pratique la danse (zouk, biguine, gwo ka, rock) et le sport avec un coach pour l'équilibre physique et mental.</p>
-                </div>
-                <!-- Nouvelle section Lecture -->
-                <div class="info-dynamic-card lecture">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">📚</span>
-                    <h3 class="info-card-header-title">Passion pour la Lecture</h3>
-                    <p class="info-card-text">Je suis une adepte du développement personnel et de la spiritualité, des thèmes que j'explore à travers mes lectures :</p>
-                    <ul class="info-card-text list-disc list-inside mt-2 text-left mx-auto max-w-xs">
-                        <li>Avoir le courage de ne pas être aimé (2018)</li>
-                        <li>L'art subtil de s'en foutre (2017)</li>
-                        <li>Avoir le courage d'être heureux (2023)</li>
-                    </ul>
-                </div>
-
-                <!-- Innovation Connectée -->
-                <div class="info-dynamic-card innovation">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💡</span>
-                    <h3 class="info-card-header-title">Innovation Connectée (Veille CDO)</h3>
-                    <p class="info-card-text">Je suis en veille technologique constante (Apple, Android).</p>
-                    <p class="info-card-text">Je monte des PC et m'initie au codage (HTML, CSS, JavaScript).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Communautaire -->
-        <div id="engagement-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Communautaire</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🤝</span>
-                    <h3 class="info-card-header-title">Créateur & Animateur de la communauté "Payroll Boss Elite Club" 👑</h3>
-                    <p class="info-card-text">
-                        <b>Période :</b> Aujourd'hui
-                    </p>
-                    <p class="info-card-text mt-2 text-justify">
-                        En parallèle de l'activité professionnelle, un engagement bénévole est dédié à l'accompagnement des professionnels en préparation de la certification de gestionnaire de paie. Création d'un espace d'entraide et de formation pratique, offrant un partage gratuit d'expertise pour une montée en compétence rapide et efficace.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Réalisations & Compétences Clés :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💬</span> Animation de communauté
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Création et gestion d'un serveur Discord et d'un groupe WhatsApp pour des échanges quotidiens et une entraide mutuelle.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🧑‍🏫</span> Pédagogie & Mentorat
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Organisation de sessions pratiques (exercices, quiz, Q&A) sur des sujets clés (droit du travail, administration du personnel, paie) pour faciliter l'apprentissage.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💡</span> Vulgarisation technique
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Transformation de concepts complexes en ressources accessibles pour une meilleure assimilation des connaissances.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">👑</span> Leadership
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Animation des discussions, structuration du contenu et encouragement à la pratique pour développer la confiance et l'autonomie des membres.</p>
-                            </div>
-                        </div>
-                        <!-- Nouvelle 5ème étape : Création de documents interactifs -->
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📄</span> Création de documents interactifs
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Conception de supports pédagogiques dynamiques pour la communauté.</p>
-                                <p class="mt-2">Exemple de document : <a href="https://projettechacademy.github.io/Suivi-et-Revision-des-Competences-Gestionnaire-de-Paie/" target="_blank" class="text-accent-blue hover:text-peps-rose-orange underline">✨ Programme ✨ Suivi ✨ Révision ✨ Évaluation ✨ Graduate Gestionnaire de Paie ✨</a> (Objectif: Certification Gestionnaire de Paie)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4">
-                        La communauté est accessible via :
-                        <div class="flex justify-center mt-4 flex-wrap gap-2">
-                            <a href="https://chat.whatsapp.com/EtV0ux5ipAG5JDhopzo0ut" target="_blank" class="social-logo-button whatsapp">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.5 3.45 1.46 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm.04 18.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.81-1.26-1.25-2.73-1.25-4.28C3.99 7.5 7.5 3.99 12.04 3.99c3.98 0 7.23 3.25 7.23 7.23 0 3.98-3.25 7.23-7.23 7.23zm4.52-6.12c-.25-.12-.92-.46-1.06-.51-.15-.05-.29-.05-.42.05-.14.1-.54.51-.66.65-.12.14-.25.15-.49.07-.23-.08-.97-.36-1.85-.92-.69-.45-1.15-.8-1.28-1.03-.13-.2-.01-.31.09-.41.09-.09.2-.23.29-.34.09-.1.12-.18.18-.31.06-.13.03-.24-.01-.34-.04-.1-.42-1.02-.58-1.39-.15-.36-.3-.31-.42-.32h-.4c-.14-.01-.36-.01-.54.1-.18.11-.69.68-.69 1.67 0 .99.71 1.93.81 2.06.1.14 1.39 2.13 3.38 2.9.47.18.84.29 1.13.37.49.14.7.12.96.08.27-.05.89-.36 1.02-.71.13-.35.13-.65.09-.71-.05-.06-.15-.1-.28-.16z"/></svg>
-                                WhatsApp
-                            </a>
-                            <a href="https://discord.gg/4XFpkQDzde" target="_blank" class="social-logo-button discord">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M20.317 1.438a1.353 1.353 0 00-1.07-.406c-1.83.19-3.565.594-5.228 1.187a.97.97 0 00-.518.006c-1.663-.593-3.398-.997-5.228-1.187a1.353 1.353 0 00-1.07.406 1.05 1.05 0 00-.406.844c0 4.094 1.375 7.562 4.125 10.406a1.05 1.05 0 00.844.406 1.353 1.353 0 00.938-.406c2.75-2.844 4.125-6.312 4.125-10.406a1.05 1.05 0 00-.406-.844zM8.53 13.938a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938zm6.938 0a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938z"/></svg>
-                                Discord
-                            </a>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Éthique & Handicap -->
-        <div id="handicap-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Éthique & Handicap</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">♿</span> <!-- Icône pour le handicap -->
-                    <h3 class="info-card-header-title">Engagement pour l'Accessibilité et l'Éthique</h3>
-                    <p class="info-card-text mt-2 text-justify">
-                        En tant que <b>Travailleur Handicapé (RQTH)</b>, la transparence est une valeur essentielle pour moi. J'ai un handicap non-visible qui ne m'empêche en rien de remplir mes missions de façon autonome et rigoureuse.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Aménagements nécessaires :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🪑</span> Chaise et bureau ergonomiques
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un environnement de travail adapté pour garantir le confort et prévenir les troubles musculo-squelettiques.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">⌨️</span> Clavier et souris adaptés
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Des périphériques ergonomiques pour une utilisation prolongée sans gêne.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📝</span> Logiciel de prise de notes
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un outil numérique pour faciliter l'organisation et la mémorisation des informations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4 text-justify">
-                        Ces aménagements sont très courants et simples à mettre en place. Pour accompagner l'employeur dans cette démarche, des solutions d'aide et de subvention sont proposées par l'<b>AGEFIPH</b>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Réalisations Clés -->
-        <div id="realisations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
-            <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
-                tout au long de mon parcours professionnel.
-            </p>
-
-            <div class="realisations-accordion-item gradient-1">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
-                        <span class="period">Décembre 2024 – Mai 2025</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
-                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
-                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
-                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-2">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>CGI – Consultante Fonctionnelle</h3>
-                        <span class="period">Janvier 2023 à juin 2024</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
-                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
-                    <ul>
-                        <li>Rédaction précise des scripts de tests.</li>
-                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
-                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
-                        <li>Détection proactive, qualification et correction des anomalies.</li>
-                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
-                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
-                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
-                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
-                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
-                    </ul>
-
-                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
-                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
-                    <ul>
-                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
-                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
-                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
-                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-3">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Talent Solutions - Chargée RH</h3>
-                        <span class="period">Juillet 2022 à décembre 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs.</li>
-                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
-                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-4">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
-                        <span class="period">Novembre 2018 à mars 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
-                    <ul>
-                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
-                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
-                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
-                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
-                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
-                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
-                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
-                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
-                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-5">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Multi Sociétés - Chargée de Paie</h3>
-                        <span class="period">Avril 2008 à octobre 2018</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
-                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
-                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
-                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-6">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>KFC - Directrice de Centre de Profit</h3>
-                        <span class="period">Avril 2002 à mars 2004</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
-                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
-                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
-                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
-        <div id="skills-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
-            <p class="skills-intro-text">
-                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card soft-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
-                            <span class="skill-tag-text">Leadership naturel</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
-                            <span class="skill-tag-text">Communication</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
-                            <span class="skill-tag-text">Analyse & Synthèse</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
-                            <span class="skill-tag-text">Rigueur</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
-                            <span class="skill-tag-text">Adaptabilité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
-                            <span class="skill-tag-text">Proactivité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
-                            <span class="skill-tag-text">Orientée résultats</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
-                            <span class="skill-tag-text">Créativité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="skill-card hard-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Hard Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
-                            <span class="skill-tag-text">Gestion de projets</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
-                            <span class="skill-tag-text">Paie & Admin RH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
-                            <span class="skill-tag-text">Outils SIRH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
-                            <span class="skill-tag-text">Gestion du changement</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
-                            <span class="skill-tag-text">Veille réglementaire</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs chez Talent Solutions." id="hard-skill-6">
-                            <span class="skill-tag-text">Optimisation processus</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
-                            <span class="skill-tag-text">Management équipes</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
-                            <span class="skill-tag-text">Rédaction de specs</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Informations Personnelles (Dynamic Cards with Illustrations) -->
-        <div id="informations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Infos Personnelles</h2>
-            <div class="info-category-grid">
-                <!-- Langues -->
-                <div class="info-dynamic-card langues">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🗣️</span>
-                    <h3 class="info-card-header-title">Langues</h3>
-                    <p class="info-card-text"><b class="skill-emphasis">Français</b> (langue maternelle)</p>
-                    <p class="info-card-text"><b class="skill-emphasis">Anglais</b> (A2 - compréhension technique)</p>
-                </div>
-
-                <!-- Création Gourmande -->
-                <div class="info-dynamic-card gourmande">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🍪</span>
-                    <h3 class="info-card-header-title">Création Gourmande</h3>
-                    <p class="info-card-text">J'organise des événements (traiteur, amuse-bouches) et je suis passionnée de pâtisserie.</p>
-                    <p class="info-card-text">Je suis spécialisée dans la création de recettes originales, notamment les cookies.</p>
-                </div>
-
-                <!-- Harmonie Musicale -->
-                <div class="info-dynamic-card musicale">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🎶</span>
-                    <h3 class="info-card-header-title">Harmonie Musicale</h3>
-                    <p class="info-card-text">Je suis passionnée de musique classique (piano), afro-antillaise (rétro 80's), et de variété (Michael Jackson, Madonna).</p>
-                </div>
-
-                <!-- Danse & Bien-être -->
-                <div class="info-dynamic-card danse">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💃</span>
-                    <h3 class="info-card-header-title">Danse & Bien-être</h3>
-                    <p class="info-card-text">Je pratique la danse (zouk, biguine, gwo ka, rock) et le sport avec un coach pour l'équilibre physique et mental.</p>
-                </div>
-                <!-- Nouvelle section Lecture -->
-                <div class="info-dynamic-card lecture">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">📚</span>
-                    <h3 class="info-card-header-title">Passion pour la Lecture</h3>
-                    <p class="info-card-text">Je suis une adepte du développement personnel et de la spiritualité, des thèmes que j'explore à travers mes lectures :</p>
-                    <ul class="info-card-text list-disc list-inside mt-2 text-left mx-auto max-w-xs">
-                        <li>Avoir le courage de ne pas être aimé (2018)</li>
-                        <li>L'art subtil de s'en foutre (2017)</li>
-                        <li>Avoir le courage d'être heureux (2023)</li>
-                    </ul>
-                </div>
-
-                <!-- Innovation Connectée -->
-                <div class="info-dynamic-card innovation">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💡</span>
-                    <h3 class="info-card-header-title">Innovation Connectée (Veille CDO)</h3>
-                    <p class="info-card-text">Je suis en veille technologique constante (Apple, Android).</p>
-                    <p class="info-card-text">Je monte des PC et m'initie au codage (HTML, CSS, JavaScript).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Communautaire -->
-        <div id="engagement-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Communautaire</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🤝</span>
-                    <h3 class="info-card-header-title">Créateur & Animateur de la communauté "Payroll Boss Elite Club" 👑</h3>
-                    <p class="info-card-text">
-                        <b>Période :</b> Aujourd'hui
-                    </p>
-                    <p class="info-card-text mt-2 text-justify">
-                        En parallèle de l'activité professionnelle, un engagement bénévole est dédié à l'accompagnement des professionnels en préparation de la certification de gestionnaire de paie. Création d'un espace d'entraide et de formation pratique, offrant un partage gratuit d'expertise pour une montée en compétence rapide et efficace.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Réalisations & Compétences Clés :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💬</span> Animation de communauté
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Création et gestion d'un serveur Discord et d'un groupe WhatsApp pour des échanges quotidiens et une entraide mutuelle.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🧑‍🏫</span> Pédagogie & Mentorat
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Organisation de sessions pratiques (exercices, quiz, Q&A) sur des sujets clés (droit du travail, administration du personnel, paie) pour faciliter l'apprentissage.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💡</span> Vulgarisation technique
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Transformation de concepts complexes en ressources accessibles pour une meilleure assimilation des connaissances.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">👑</span> Leadership
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Animation des discussions, structuration du contenu et encouragement à la pratique pour développer la confiance et l'autonomie des membres.</p>
-                            </div>
-                        </div>
-                        <!-- Nouvelle 5ème étape : Création de documents interactifs -->
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📄</span> Création de documents interactifs
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Conception de supports pédagogiques dynamiques pour la communauté.</p>
-                                <p class="mt-2">Exemple de document : <a href="https://projettechacademy.github.io/Suivi-et-Revision-des-Competences-Gestionnaire-de-Paie/" target="_blank" class="text-accent-blue hover:text-peps-rose-orange underline">✨ Programme ✨ Suivi ✨ Révision ✨ Évaluation ✨ Graduate Gestionnaire de Paie ✨</a> (Objectif: Certification Gestionnaire de Paie)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4">
-                        La communauté est accessible via :
-                        <div class="flex justify-center mt-4 flex-wrap gap-2">
-                            <a href="https://chat.whatsapp.com/EtV0ux5ipAG5JDhopzo0ut" target="_blank" class="social-logo-button whatsapp">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.5 3.45 1.46 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm.04 18.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.81-1.26-1.25-2.73-1.25-4.28C3.99 7.5 7.5 3.99 12.04 3.99c3.98 0 7.23 3.25 7.23 7.23 0 3.98-3.25 7.23-7.23 7.23zm4.52-6.12c-.25-.12-.92-.46-1.06-.51-.15-.05-.29-.05-.42.05-.14.1-.54.51-.66.65-.12.14-.25.15-.49.07-.23-.08-.97-.36-1.85-.92-.69-.45-1.15-.8-1.28-1.03-.13-.2-.01-.31.09-.41.09-.09.2-.23.29-.34.09-.1.12-.18.18-.31.06-.13.03-.24-.01-.34-.04-.1-.42-1.02-.58-1.39-.15-.36-.3-.31-.42-.32h-.4c-.14-.01-.36-.01-.54.1-.18.11-.69.68-.69 1.67 0 .99.71 1.93.81 2.06.1.14 1.39 2.13 3.38 2.9.47.18.84.29 1.13.37.49.14.7.12.96.08.27-.05.89-.36 1.02-.71.13-.35.13-.65.09-.71-.05-.06-.15-.1-.28-.16z"/></svg>
-                                WhatsApp
-                            </a>
-                            <a href="https://discord.gg/4XFpkQDzde" target="_blank" class="social-logo-button discord">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M20.317 1.438a1.353 1.353 0 00-1.07-.406c-1.83.19-3.565.594-5.228 1.187a.97.97 0 00-.518.006c-1.663-.593-3.398-.997-5.228-1.187a1.353 1.353 0 00-1.07.406 1.05 1.05 0 00-.406.844c0 4.094 1.375 7.562 4.125 10.406a1.05 1.05 0 00.844.406 1.353 1.353 0 00.938-.406c2.75-2.844 4.125-6.312 4.125-10.406a1.05 1.05 0 00-.406-.844zM8.53 13.938a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938zm6.938 0a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938z"/></svg>
-                                Discord
-                            </a>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Réalisations Clés -->
-        <div id="realisations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
-            <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
-                tout au long de mon parcours professionnel.
-            </p>
-
-            <div class="realisations-accordion-item gradient-1">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
-                        <span class="period">Décembre 2024 – Mai 2025</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
-                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
-                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
-                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-2">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>CGI – Consultante Fonctionnelle</h3>
-                        <span class="period">Janvier 2023 à juin 2024</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
-                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
-                    <ul>
-                        <li>Rédaction précise des scripts de tests.</li>
-                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
-                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
-                        <li>Détection proactive, qualification et correction des anomalies.</li>
-                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
-                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
-                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
-                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
-                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
-                    </ul>
-
-                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
-                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
-                    <ul>
-                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
-                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
-                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
-                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-3">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Talent Solutions - Chargée RH</h3>
-                        <span class="period">Juillet 2022 à décembre 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs.</li>
-                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
-                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-4">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
-                        <span class="period">Novembre 2018 à mars 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
-                    <ul>
-                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
-                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
-                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
-                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
-                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
-                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
-                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
-                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
-                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-5">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Multi Sociétés - Chargée de Paie</h3>
-                        <span class="period">Avril 2008 à octobre 2018</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
-                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
-                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
-                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-6">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>KFC - Directrice de Centre de Profit</h3>
-                        <span class="period">Avril 2002 à mars 2004</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
-                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
-                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
-                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
-        <div id="skills-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
-            <p class="skills-intro-text">
-                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card soft-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
-                            <span class="skill-tag-text">Leadership naturel</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
-                            <span class="skill-tag-text">Communication</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
-                            <span class="skill-tag-text">Analyse & Synthèse</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
-                            <span class="skill-tag-text">Rigueur</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
-                            <span class="skill-tag-text">Adaptabilité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
-                            <span class="skill-tag-text">Proactivité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
-                            <span class="skill-tag-text">Orientée résultats</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
-                            <span class="skill-tag-text">Créativité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="skill-card hard-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Hard Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
-                            <span class="skill-tag-text">Gestion de projets</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
-                            <span class="skill-tag-text">Paie & Admin RH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
-                            <span class="skill-tag-text">Outils SIRH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
-                            <span class="skill-tag-text">Gestion du changement</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
-                            <span class="skill-tag-text">Veille réglementaire</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs chez Talent Solutions." id="hard-skill-6">
-                            <span class="skill-tag-text">Optimisation processus</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
-                            <span class="skill-tag-text">Management équipes</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
-                            <span class="skill-tag-text">Rédaction de specs</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Informations Personnelles (Dynamic Cards with Illustrations) -->
-        <div id="informations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Infos Personnelles</h2>
-            <div class="info-category-grid">
-                <!-- Langues -->
-                <div class="info-dynamic-card langues">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🗣️</span>
-                    <h3 class="info-card-header-title">Langues</h3>
-                    <p class="info-card-text"><b class="skill-emphasis">Français</b> (langue maternelle)</p>
-                    <p class="info-card-text"><b class="skill-emphasis">Anglais</b> (A2 - compréhension technique)</p>
-                </div>
-
-                <!-- Création Gourmande -->
-                <div class="info-dynamic-card gourmande">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🍪</span>
-                    <h3 class="info-card-header-title">Création Gourmande</h3>
-                    <p class="info-card-text">J'organise des événements (traiteur, amuse-bouches) et je suis passionnée de pâtisserie.</p>
-                    <p class="info-card-text">Je suis spécialisée dans la création de recettes originales, notamment les cookies.</p>
-                </div>
-
-                <!-- Harmonie Musicale -->
-                <div class="info-dynamic-card musicale">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🎶</span>
-                    <h3 class="info-card-header-title">Harmonie Musicale</h3>
-                    <p class="info-card-text">Je suis passionnée de musique classique (piano), afro-antillaise (rétro 80's), et de variété (Michael Jackson, Madonna).</p>
-                </div>
-
-                <!-- Danse & Bien-être -->
-                <div class="info-dynamic-card danse">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💃</span>
-                    <h3 class="info-card-header-title">Danse & Bien-être</h3>
-                    <p class="info-card-text">Je pratique la danse (zouk, biguine, gwo ka, rock) et le sport avec un coach pour l'équilibre physique et mental.</p>
-                </div>
-                <!-- Nouvelle section Lecture -->
-                <div class="info-dynamic-card lecture">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">📚</span>
-                    <h3 class="info-card-header-title">Passion pour la Lecture</h3>
-                    <p class="info-card-text">Je suis une adepte du développement personnel et de la spiritualité, des thèmes que j'explore à travers mes lectures :</p>
-                    <ul class="info-card-text list-disc list-inside mt-2 text-left mx-auto max-w-xs">
-                        <li>Avoir le courage de ne pas être aimé (2018)</li>
-                        <li>L'art subtil de s'en foutre (2017)</li>
-                        <li>Avoir le courage d'être heureux (2023)</li>
-                    </ul>
-                </div>
-
-                <!-- Innovation Connectée -->
-                <div class="info-dynamic-card innovation">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💡</span>
-                    <h3 class="info-card-header-title">Innovation Connectée (Veille CDO)</h3>
-                    <p class="info-card-text">Je suis en veille technologique constante (Apple, Android).</p>
-                    <p class="info-card-text">Je monte des PC et m'initie au codage (HTML, CSS, JavaScript).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Communautaire -->
-        <div id="engagement-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Communautaire</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🤝</span>
-                    <h3 class="info-card-header-title">Créateur & Animateur de la communauté "Payroll Boss Elite Club" 👑</h3>
-                    <p class="info-card-text">
-                        <b>Période :</b> Aujourd'hui
-                    </p>
-                    <p class="info-card-text mt-2 text-justify">
-                        En parallèle de l'activité professionnelle, un engagement bénévole est dédié à l'accompagnement des professionnels en préparation de la certification de gestionnaire de paie. Création d'un espace d'entraide et de formation pratique, offrant un partage gratuit d'expertise pour une montée en compétence rapide et efficace.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Réalisations & Compétences Clés :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💬</span> Animation de communauté
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Création et gestion d'un serveur Discord et d'un groupe WhatsApp pour des échanges quotidiens et une entraide mutuelle.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🧑‍🏫</span> Pédagogie & Mentorat
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Organisation de sessions pratiques (exercices, quiz, Q&A) sur des sujets clés (droit du travail, administration du personnel, paie) pour faciliter l'apprentissage.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💡</span> Vulgarisation technique
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Transformation de concepts complexes en ressources accessibles pour une meilleure assimilation des connaissances.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">👑</span> Leadership
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Animation des discussions, structuration du contenu et encouragement à la pratique pour développer la confiance et l'autonomie des membres.</p>
-                            </div>
-                        </div>
-                        <!-- Nouvelle 5ème étape : Création de documents interactifs -->
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📄</span> Création de documents interactifs
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Conception de supports pédagogiques dynamiques pour la communauté.</p>
-                                <p class="mt-2">Exemple de document : <a href="https://projettechacademy.github.io/Suivi-et-Revision-des-Competences-Gestionnaire-de-Paie/" target="_blank" class="text-accent-blue hover:text-peps-rose-orange underline">✨ Programme ✨ Suivi ✨ Révision ✨ Évaluation ✨ Graduate Gestionnaire de Paie ✨</a> (Objectif: Certification Gestionnaire de Paie)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4">
-                        La communauté est accessible via :
-                        <div class="flex justify-center mt-4 flex-wrap gap-2">
-                            <a href="https://chat.whatsapp.com/EtV0ux5ipAG5JDhopzo0ut" target="_blank" class="social-logo-button whatsapp">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.5 3.45 1.46 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm.04 18.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.81-1.26-1.25-2.73-1.25-4.28C3.99 7.5 7.5 3.99 12.04 3.99c3.98 0 7.23 3.25 7.23 7.23 0 3.98-3.25 7.23-7.23 7.23zm4.52-6.12c-.25-.12-.92-.46-1.06-.51-.15-.05-.29-.05-.42.05-.14.1-.54.51-.66.65-.12.14-.25.15-.49.07-.23-.08-.97-.36-1.85-.92-.69-.45-1.15-.8-1.28-1.03-.13-.2-.01-.31.09-.41.09-.09.2-.23.29-.34.09-.1.12-.18.18-.31.06-.13.03-.24-.01-.34-.04-.1-.42-1.02-.58-1.39-.15-.36-.3-.31-.42-.32h-.4c-.14-.01-.36-.01-.54.1-.18.11-.69.68-.69 1.67 0 .99.71 1.93.81 2.06.1.14 1.39 2.13 3.38 2.9.47.18.84.29 1.13.37.49.14.7.12.96.08.27-.05.89-.36 1.02-.71.13-.35.13-.65.09-.71-.05-.06-.15-.1-.28-.16z"/></svg>
-                                WhatsApp
-                            </a>
-                            <a href="https://discord.gg/4XFpkQDzde" target="_blank" class="social-logo-button discord">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M20.317 1.438a1.353 1.353 0 00-1.07-.406c-1.83.19-3.565.594-5.228 1.187a.97.97 0 00-.518.006c-1.663-.593-3.398-.997-5.228-1.187a1.353 1.353 0 00-1.07.406 1.05 1.05 0 00-.406.844c0 4.094 1.375 7.562 4.125 10.406a1.05 1.05 0 00.844.406 1.353 1.353 0 00.938-.406c2.75-2.844 4.125-6.312 4.125-10.406a1.05 1.05 0 00-.406-.844zM8.53 13.938a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938zm6.938 0a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938z"/></svg>
-                                Discord
-                            </a>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Éthique & Handicap -->
-        <div id="handicap-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Éthique & Handicap</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">♿</span> <!-- Icône pour le handicap -->
-                    <h3 class="info-card-header-title">Engagement pour l'Accessibilité et l'Éthique</h3>
-                    <p class="info-card-text mt-2 text-justify">
-                        En tant que <b>Travailleur Handicapé (RQTH)</b>, la transparence est une valeur essentielle pour moi. J'ai un handicap non-visible qui ne m'empêche en rien de remplir mes missions de façon autonome et rigoureuse.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Aménagements nécessaires :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🪑</span> Chaise et bureau ergonomiques
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un environnement de travail adapté pour garantir le confort et prévenir les troubles musculo-squelettiques.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">⌨️</span> Clavier et souris adaptés
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Des périphériques ergonomiques pour une utilisation prolongée sans gêne.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📝</span> Logiciel de prise de notes
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un outil numérique pour faciliter l'organisation et la mémorisation des informations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4 text-justify">
-                        Ces aménagements sont très courants et simples à mettre en place. Pour accompagner l'employeur dans cette démarche, des solutions d'aide et de subvention sont proposées par l'<b>AGEFIPH</b>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Réalisations Clés -->
-        <div id="realisations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
-            <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
-                tout au long de mon parcours professionnel.
-            </p>
-
-            <div class="realisations-accordion-item gradient-1">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
-                        <span class="period">Décembre 2024 – Mai 2025</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
-                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
-                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
-                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-2">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>CGI – Consultante Fonctionnelle</h3>
-                        <span class="period">Janvier 2023 à juin 2024</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
-                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
-                    <ul>
-                        <li>Rédaction précise des scripts de tests.</li>
-                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
-                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
-                        <li>Détection proactive, qualification et correction des anomalies.</li>
-                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
-                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
-                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
-                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
-                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
-                    </ul>
-
-                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
-                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
-                    <ul>
-                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
-                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
-                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
-                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-3">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Talent Solutions - Chargée RH</h3>
-                        <span class="period">Juillet 2022 à décembre 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs.</li>
-                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
-                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-4">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
-                        <span class="period">Novembre 2018 à mars 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
-                    <ul>
-                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
-                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
-                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
-                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
-                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
-                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
-                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
-                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
-                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-5">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Multi Sociétés - Chargée de Paie</h3>
-                        <span class="period">Avril 2008 à octobre 2018</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
-                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
-                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
-                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-6">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>KFC - Directrice de Centre de Profit</h3>
-                        <span class="period">Avril 2002 à mars 2004</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
-                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
-                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
-                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
-        <div id="skills-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
-            <p class="skills-intro-text">
-                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card soft-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
-                            <span class="skill-tag-text">Leadership naturel</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
-                            <span class="skill-tag-text">Communication</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
-                            <span class="skill-tag-text">Analyse & Synthèse</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
-                            <span class="skill-tag-text">Rigueur</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
-                            <span class="skill-tag-text">Adaptabilité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
-                            <span class="skill-tag-text">Proactivité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
-                            <span class="skill-tag-text">Orientée résultats</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
-                            <span class="skill-tag-text">Créativité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="skill-card hard-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Hard Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
-                            <span class="skill-tag-text">Gestion de projets</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
-                            <span class="skill-tag-text">Paie & Admin RH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
-                            <span class="skill-tag-text">Outils SIRH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
-                            <span class="skill-tag-text">Gestion du changement</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
-                            <span class="skill-tag-text">Veille réglementaire</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs chez Talent Solutions." id="hard-skill-6">
-                            <span class="skill-tag-text">Optimisation processus</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
-                            <span class="skill-tag-text">Management équipes</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
-                            <span class="skill-tag-text">Rédaction de specs</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Informations Personnelles (Dynamic Cards with Illustrations) -->
-        <div id="informations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Infos Personnelles</h2>
-            <div class="info-category-grid">
-                <!-- Langues -->
-                <div class="info-dynamic-card langues">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🗣️</span>
-                    <h3 class="info-card-header-title">Langues</h3>
-                    <p class="info-card-text"><b class="skill-emphasis">Français</b> (langue maternelle)</p>
-                    <p class="info-card-text"><b class="skill-emphasis">Anglais</b> (A2 - compréhension technique)</p>
-                </div>
-
-                <!-- Création Gourmande -->
-                <div class="info-dynamic-card gourmande">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🍪</span>
-                    <h3 class="info-card-header-title">Création Gourmande</h3>
-                    <p class="info-card-text">J'organise des événements (traiteur, amuse-bouches) et je suis passionnée de pâtisserie.</p>
-                    <p class="info-card-text">Je suis spécialisée dans la création de recettes originales, notamment les cookies.</p>
-                </div>
-
-                <!-- Harmonie Musicale -->
-                <div class="info-dynamic-card musicale">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🎶</span>
-                    <h3 class="info-card-header-title">Harmonie Musicale</h3>
-                    <p class="info-card-text">Je suis passionnée de musique classique (piano), afro-antillaise (rétro 80's), et de variété (Michael Jackson, Madonna).</p>
-                </div>
-
-                <!-- Danse & Bien-être -->
-                <div class="info-dynamic-card danse">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💃</span>
-                    <h3 class="info-card-header-title">Danse & Bien-être</h3>
-                    <p class="info-card-text">Je pratique la danse (zouk, biguine, gwo ka, rock) et le sport avec un coach pour l'équilibre physique et mental.</p>
-                </div>
-                <!-- Nouvelle section Lecture -->
-                <div class="info-dynamic-card lecture">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">📚</span>
-                    <h3 class="info-card-header-title">Passion pour la Lecture</h3>
-                    <p class="info-card-text">Je suis une adepte du développement personnel et de la spiritualité, des thèmes que j'explore à travers mes lectures :</p>
-                    <ul class="info-card-text list-disc list-inside mt-2 text-left mx-auto max-w-xs">
-                        <li>Avoir le courage de ne pas être aimé (2018)</li>
-                        <li>L'art subtil de s'en foutre (2017)</li>
-                        <li>Avoir le courage d'être heureux (2023)</li>
-                    </ul>
-                </div>
-
-                <!-- Innovation Connectée -->
-                <div class="info-dynamic-card innovation">
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">💡</span>
-                    <h3 class="info-card-header-title">Innovation Connectée (Veille CDO)</h3>
-                    <p class="info-card-text">Je suis en veille technologique constante (Apple, Android).</p>
-                    <p class="info-card-text">Je monte des PC et m'initie au codage (HTML, CSS, JavaScript).</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Communautaire -->
-        <div id="engagement-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Communautaire</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">🤝</span>
-                    <h3 class="info-card-header-title">Créateur & Animateur de la communauté "Payroll Boss Elite Club" 👑</h3>
-                    <p class="info-card-text">
-                        <b>Période :</b> Aujourd'hui
-                    </p>
-                    <p class="info-card-text mt-2 text-justify">
-                        En parallèle de l'activité professionnelle, un engagement bénévole est dédié à l'accompagnement des professionnels en préparation de la certification de gestionnaire de paie. Création d'un espace d'entraide et de formation pratique, offrant un partage gratuit d'expertise pour une montée en compétence rapide et efficace.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Réalisations & Compétences Clés :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💬</span> Animation de communauté
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Création et gestion d'un serveur Discord et d'un groupe WhatsApp pour des échanges quotidiens et une entraide mutuelle.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🧑‍🏫</span> Pédagogie & Mentorat
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Organisation de sessions pratiques (exercices, quiz, Q&A) sur des sujets clés (droit du travail, administration du personnel, paie) pour faciliter l'apprentissage.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">💡</span> Vulgarisation technique
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Transformation de concepts complexes en ressources accessibles pour une meilleure assimilation des connaissances.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">👑</span> Leadership
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Animation des discussions, structuration du contenu et encouragement à la pratique pour développer la confiance et l'autonomie des membres.</p>
-                            </div>
-                        </div>
-                        <!-- Nouvelle 5ème étape : Création de documents interactifs -->
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📄</span> Création de documents interactifs
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Conception de supports pédagogiques dynamiques pour la communauté.</p>
-                                <p class="mt-2">Exemple de document : <a href="https://projettechacademy.github.io/Suivi-et-Revision-des-Competences-Gestionnaire-de-Paie/" target="_blank" class="text-accent-blue hover:text-peps-rose-orange underline">✨ Programme ✨ Suivi ✨ Révision ✨ Évaluation ✨ Graduate Gestionnaire de Paie ✨</a> (Objectif: Certification Gestionnaire de Paie)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4">
-                        La communauté est accessible via :
-                        <div class="flex justify-center mt-4 flex-wrap gap-2">
-                            <a href="https://chat.whatsapp.com/EtV0ux5ipAG5JDhopzo0ut" target="_blank" class="social-logo-button whatsapp">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M12.04 2c-5.45 0-9.91 4.46-9.91 9.91 0 1.75.5 3.45 1.46 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.45 0 9.91-4.46 9.91-9.91s-4.46-9.91-9.91-9.91zm.04 18.12c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.81-1.26-1.25-2.73-1.25-4.28C3.99 7.5 7.5 3.99 12.04 3.99c3.98 0 7.23 3.25 7.23 7.23 0 3.98-3.25 7.23-7.23 7.23zm4.52-6.12c-.25-.12-.92-.46-1.06-.51-.15-.05-.29-.05-.42.05-.14.1-.54.51-.66.65-.12.14-.25.15-.49.07-.23-.08-.97-.36-1.85-.92-.69-.45-1.15-.8-1.28-1.03-.13-.2-.01-.31.09-.41.09-.09.2-.23.29-.34.09-.1.12-.18.18-.31.06-.13.03-.24-.01-.34-.04-.1-.42-1.02-.58-1.39-.15-.36-.3-.31-.42-.32h-.4c-.14-.01-.36-.01-.54.1-.18.11-.69.68-.69 1.67 0 .99.71 1.93.81 2.06.1.14 1.39 2.13 3.38 2.9.47.18.84.29 1.13.37.49.14.7.12.96.08.27-.05.89-.36 1.02-.71.13-.35.13-.-65.09-.71-.05-.06-.15-.1-.28-.16z"/></svg>
-                                WhatsApp
-                            </a>
-                            <a href="https://discord.gg/4XFpkQDzde" target="_blank" class="social-logo-button discord">
-                                <svg viewBox="0 0 24 24" width="24" height="24" fill="white" class="mr-2"><path d="M20.317 1.438a1.353 1.353 0 00-1.07-.406c-1.83.19-3.565.594-5.228 1.187a.97.97 0 00-.518.006c-1.663-.593-3.398-.997-5.228-1.187a1.353 1.353 0 00-1.07.406 1.05 1.05 0 00-.406.844c0 4.094 1.375 7.562 4.125 10.406a1.05 1.05 0 00.844.406 1.353 1.353 0 00.938-.406c2.75-2.844 4.125-6.312 4.125-10.406a1.05 1.05 0 00-.406-.844zM8.53 13.938a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938zm6.938 0a.938.938 0 01-.938.938.938.938 0 01-.937-.938.938.938 0 01.937-.938.938.938 0 01.938.938z"/></svg>
-                                Discord
-                            </a>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Engagement Éthique & Handicap -->
-        <div id="handicap-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Éthique & Handicap</h2>
-            <div class="info-category-grid">
-                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
-                    <div class="info-card-overlay-shape"></div>
-                    <span class="info-card-large-icon">♿</span> <!-- Icône pour le handicap -->
-                    <h3 class="info-card-header-title">Engagement pour l'Accessibilité et l'Éthique</h3>
-                    <p class="info-card-text mt-2 text-justify">
-                        En tant que <b>Travailleur Handicapé (RQTH)</b>, la transparence est une valeur essentielle pour moi. J'ai un handicap non-visible qui ne m'empêche en rien de remplir mes missions de façon autonome et rigoureuse.
-                    </p>
-                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Aménagements nécessaires :</h4>
-                    <div class="space-y-4 mt-4">
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">🪑</span> Chaise et bureau ergonomiques
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un environnement de travail adapté pour garantir le confort et prévenir les troubles musculo-squelettiques.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">⌨️</span> Clavier et souris adaptés
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Des périphériques ergonomiques pour une utilisation prolongée sans gêne.</p>
-                            </div>
-                        </div>
-                        <div class="community-accordion-item">
-                            <div class="community-accordion-header">
-                                <span class="icon">📝</span> Logiciel de prise de notes
-                                <span class="toggle-icon">+</span>
-                            </div>
-                            <div class="community-accordion-content">
-                                <p>Un outil numérique pour faciliter l'organisation et la mémorisation des informations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-card-text mt-4 text-justify">
-                        Ces aménagements sont très courants et simples à mettre en place. Pour accompagner l'employeur dans cette démarche, des solutions d'aide et de subvention sont proposées par l'<b>AGEFIPH</b>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Réalisations Clés -->
-        <div id="realisations-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
-            <p class="text-gray-700 leading-relaxed text-justify mb-6">
-                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
-                tout au long de mon parcours professionnel.
-            </p>
-
-            <div class="realisations-accordion-item gradient-1">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
-                        <span class="period">Décembre 2024 – Mai 2025</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
-                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
-                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
-                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-2">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>CGI – Consultante Fonctionnelle</h3>
-                        <span class="period">Janvier 2023 à juin 2024</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
-                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
-                    <ul>
-                        <li>Rédaction précise des scripts de tests.</li>
-                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
-                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
-                        <li>Détection proactive, qualification et correction des anomalies.</li>
-                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
-                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
-                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
-                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
-                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
-                    </ul>
-
-                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
-                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
-                    <ul>
-                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
-                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
-                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
-                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-3">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Talent Solutions - Chargée RH</h3>
-                        <span class="period">Juillet 2022 à décembre 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs.</li>
-                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
-                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-4">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
-                        <span class="period">Novembre 2018 à mars 2022</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
-                    <ul>
-                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
-                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
-                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
-                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
-                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
-                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
-                    </ul>
-                    <ul class="mt-4">
-                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
-                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
-                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
-                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-5">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>Multi Sociétés - Chargée de Paie</h3>
-                        <span class="period">Avril 2008 à octobre 2018</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
-                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
-                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
-                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
-                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="realisations-accordion-item gradient-6">
-                <div class="realisations-accordion-header">
-                    <div>
-                        <h3>KFC - Directrice de Centre de Profit</h3>
-                        <span class="period">Avril 2002 à mars 2004</span>
-                    </div>
-                    <span class="realisations-accordion-toggle-icon">+</span>
-                </div>
-                <div class="realisations-accordion-content">
-                    <ul>
-                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
-                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
-                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
-                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
-        <div id="skills-section" class="section-container">
-            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
-            <p class="skills-intro-text">
-                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
-            </p>
-            <div class="skills-grid">
-                <div class="skill-card soft-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
-                            <span class="skill-tag-text">Leadership naturel</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
-                            <span class="skill-tag-text">Communication</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
-                            <span class="skill-tag-text">Analyse & Synthèse</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
-                            <span class="skill-tag-text">Rigueur</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
-                            <span class="skill-tag-text">Adaptabilité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
-                            <span class="skill-tag-text">Proactivité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
-                            <span class="skill-tag-text">Orientée résultats</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
-                            <span class="skill-tag-text">Créativité</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="skill-card hard-skills-bg p-6 rounded-lg">
-                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
-                    <h3>Hard Skills</h3>
-                    <div class="skill-tags-container">
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
-                            <span class="skill-tag-text">Gestion de projets</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
-                            <span class="skill-tag-text">Paie & Admin RH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
-                            <span class="skill-tag-text">Outils SIRH</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
-                            <span class="skill-tag-text">Gestion du changement</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
-                            <span class="skill-tag-text">Veille réglementaire</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de démarches pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs chez Talent Solutions." id="hard-skill-6">
-                            <span class="skill-tag-text">Optimisation processus</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
-                            <span class="skill-tag-text">Management équipes</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
-                            <span class="skill-tag-text">Rédaction de specs</span>
-                            <span class="skill-tag-toggle">✕</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Section "Me Contacter" -->
         <div id="contact-section" class="section-container">
             <div class="contact-container">
@@ -3719,23 +1793,293 @@
                             </a>
                         </div>
                     </div>
-                    <div class="contact-card card-cv">
-                        <div class="contact-card-content">
-                            <a href="cv-mathilde-paisley.pdf" download class="contact-link">
-                                <span class="contact-icon">📄</span>
-                                <span class="contact-text-label">Télécharger</span>
-                                <span class="contact-text-value">Mon CV</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Section Engagement Éthique & Handicap -->
+        <div id="handicap-section" class="section-container">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Engagement Éthique & Handicap</h2>
+            <div class="info-category-grid">
+                <div class="info-dynamic-card engagement-communaute lg:col-span-3"> <!-- Adjust span as needed for layout -->
+                    <div class="info-card-overlay-shape"></div>
+                    <span class="info-card-large-icon">♿</span> <!-- Icône pour le handicap -->
+                    <h3 class="info-card-header-title">Engagement pour l'Accessibilité et l'Éthique</h3>
+                    <p class="info-card-text mt-2 text-justify">
+                        En tant que **Travailleur Handicapé (RQTH)**, la transparence est une valeur essentielle pour moi. J'ai un handicap non-visible qui ne m'empêche en rien de remplir mes missions de façon autonome et rigoureuse.
+                    </p>
+                    <h4 class="font-bold text-lg text-peps-rose-orange mt-4">Aménagements nécessaires :</h4>
+                    <div class="space-y-4 mt-4">
+                        <div class="community-accordion-item">
+                            <div class="community-accordion-header">
+                                <span class="icon">🪑</span> Chaise et bureau ergonomiques
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="community-accordion-content">
+                                <p>Un environnement de travail adapté pour garantir le confort et prévenir les troubles musculo-squelettiques.</p>
+                            </div>
+                        </div>
+                        <div class="community-accordion-item">
+                            <div class="community-accordion-header">
+                                <span class="icon">⌨️</span> Clavier et souris adaptés
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="community-accordion-content">
+                                <p>Des périphériques ergonomiques pour une utilisation prolongée sans gêne.</p>
+                            </div>
+                        </div>
+                        <div class="community-accordion-item">
+                            <div class="community-accordion-header">
+                                <span class="icon">📝</span> Logiciel de prise de notes
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="community-accordion-content">
+                                <p>Un outil numérique pour faciliter l'organisation et la mémorisation des informations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="info-card-text mt-4 text-justify">
+                        Ces aménagements sont très courants et simples à mettre en place. Pour accompagner l'employeur dans cette démarche, des solutions d'aide et de subvention sont proposées par l'**AGEFIPH**.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Réalisations Clés -->
+        <div id="realisations-section" class="section-container">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title mb-8 text-center">Réalisations Clés</h2>
+            <p class="text-gray-700 leading-relaxed text-justify mb-6">
+                Ce document complète mon CV et présente, de manière détaillée et factuelle, les missions réalisées
+                tout au long de mon parcours professionnel.
+            </p>
+
+            <div class="realisations-accordion-item gradient-1">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>Nexpublica - Référente Fonctionnelle SIRH</h3>
+                        <span class="period">Décembre 2024 – Mai 2025</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <ul>
+                        <li>Appui fonctionnel sur l’outil Chronotime (GTA).</li>
+                        <li>Analyse des besoins clients et rédaction de spécifications fonctionnelles.</li>
+                        <li>Participation active à des ateliers de relecture avec les utilisateurs, intégrant leurs retours pour optimiser l’outil.</li>
+                        <li>Suivi rigoureux des échanges avec les équipes techniques, assurant une communication fluide et efficace.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="realisations-accordion-item gradient-2">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>CGI – Consultante Fonctionnelle</h3>
+                        <span class="period">Janvier 2023 à juin 2024</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <h4>Ministère de la Justice – Direction de l’Administration Pénitentiaire</h4>
+                    <p class="text-gray-700 mb-2">Projet d’AMOA sur HR Access 4YOU V9 – Déploiement de la solution Octave dans 189 établissements pénitentiaires (gestion de la paie des personnes détenues).</p>
+                    <ul>
+                        <li>Rédaction précise des scripts de tests.</li>
+                        <li>Élaboration exhaustive des cas de test couvrant tous les scénarios.</li>
+                        <li>Exécution rigoureuse des scénarios de validation, documentant les résultats.</li>
+                        <li>Détection proactive, qualification et correction des anomalies.</li>
+                        <li>Remontée structurée des dysfonctionnements aux équipes de développement, facilitant la résolution.</li>
+                        <li>Suivi attentif des corrections et nouvelle exécution des tests (rejets, reprises).</li>
+                        <li>Validation finale pour mise en production, garantissant la qualité du déploiement.</li>
+                    </ul>
+                    <ul class="mt-4">
+                        <li>Formation opérationnelle adaptée aux besoins des utilisateurs.</li>
+                        <li>Assistance réactive en phase de recette métier, répondant aux questions et résolvant les problèmes.</li>
+                        <li>Support dédié à la montée en compétence, assurant l’autonomie des utilisateurs.</li>
+                    </ul>
+
+                    <h4 class="mt-6">Air Liquide – Direction des Ressources Humaines</h4>
+                    <p class="text-gray-700 mb-2">Intervention sur le projet d’actualisation du livre blanc / des procédures réglementaires de paie, document central pour l’ensemble des sites français.</p>
+                    <ul>
+                        <li>Recensement exhaustif et actualisation des rubriques de paie utilisées dans HR Access.</li>
+                        <li>Mise à jour précise des règles de paie spécifiques par site, en lien avec les particularités locales.</li>
+                        <li>Interviews approfondies des gestionnaires paie sur environ 30 sites en France, afin de formaliser les pratiques réelles et les intégrer dans le document.</li>
+                        <li>Prise en compte rigoureuse des évolutions d’organisation : ventes de sites, changements de périmètre RH, mutations internes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="realisations-accordion-item gradient-3">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>Talent Solutions - Chargée RH</h3>
+                        <span class="period">Juillet 2022 à décembre 2022</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <ul>
+                        <li><b>Gestion de la Paie :</b> Responsable de la gestion de la paie pour 4 entités et 350 collaborateurs sur Cegid People net GA et VSA.</li>
+                        <li><b>Gestion administrative :</b> Mise en œuvre de démarches visant à améliorer l’efficacité des processus administratifs.</li>
+                        <li><b>Encadrement d’équipe :</b> Transfert de compétences et mise en place de pratiques de mentorat pour favoriser le développement professionnel des membres de l’équipe.</li>
+                        <li><b>Projet d’Optimisation RH :</b> Mise en place de solutions pour faciliter l’intégration des collaborateurs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="realisations-accordion-item gradient-4">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>Epi-Use France - Consultante Paie SIRH</h3>
+                        <span class="period">Novembre 2018 à mars 2022</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <p class="text-gray-700 mb-2">Contexte : Participation à un projet de création d’un Centre de Services Partagés (CSP) pour le groupe Tereos, en soutien à la reprise de la connaissance métier paie à la suite du départ progressif des gestionnaires.</p>
+                    <ul>
+                        <li>Reprise approfondie de la connaissance métier sur 20 sites impactés par le déploiement du CSP.</li>
+                        <li>Mise à jour complète des procédures de paie (processus complets de traitement, contrôles, pratiques locales).</li>
+                        <li>Rédaction claire et concise de guides utilisateurs pour l’outil Pléiade.</li>
+                        <li>Organisation et animation dynamique d’ateliers de relecture avec les gestionnaires et responsables locaux.</li>
+                        <li>Conduite efficace de mises en situation (traitements concrets de paie) avec l’outil.</li>
+                        <li>Formation et transfert de compétences aux nouvelles recrues internes (CDI) appelées à reprendre les postes de gestionnaires paie.</li>
+                    </ul>
+                    <ul class="mt-4">
+                        <li>Conception de 23 procédures réglementaires de paie adaptées à l’environnement SAP.</li>
+                        <li>Élaboration d’un livre blanc paie consolidant les pratiques standards et les adaptations spécifiques Tereos.</li>
+                        <li>Animation d’ateliers de validation, de relecture et de mise en situation.</li>
+                        <li>Transfert de connaissances formalisé auprès des titulaires internes, accompagnement à la prise de poste.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="realisations-accordion-item gradient-5">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>Multi Sociétés - Chargée de Paie</h3>
+                        <span class="period">Avril 2008 à octobre 2018</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <ul>
+                        <li><b>Gestion Globale de la Paie :</b> Responsable de la gestion de la paie pour 250 à 1200 collaborateurs.</li>
+                        <li><b>Optimisation des Processus RH :</b> Mise en œuvre de solutions pour optimiser les processus de paie, réduire les délais de traitement et améliorer la précision des calculs.</li>
+                        <li><b>Évolutions Légales :</b> Conduite d’évolutions légales, garantissant la conformité et la mise à jour continue des pratiques de paie.</li>
+                        <li><b>Administration du Personnel :</b> Gestion complète des documents administratifs (DPAE, contrats, avenants).</li>
+                        <li><b>Veille Sociale et Juridique :</b> Suivi des évolutions légales en RH, garantissant la conformité des pratiques de paie.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="realisations-accordion-item gradient-6">
+                <div class="realisations-accordion-header">
+                    <div>
+                        <h3>KFC - Directrice de Centre de Profit</h3>
+                        <span class="period">Avril 2002 à mars 2004</span>
+                    </div>
+                    <span class="realisations-accordion-toggle-icon">+</span>
+                </div>
+                <div class="realisations-accordion-content">
+                    <ul>
+                        <li><b>Management d’Équipe :</b> Encadrement et motivation d’une équipe de 70 personnes, comprenant managers et équipiers.</li>
+                        <li><b>Gestion Financière :</b> Responsabilité du chiffre d’affaires, élaboration de stratégies pour stimuler les ventes.</li>
+                        <li><b>Formation :</b> Conception et mise en œuvre de programmes de formation pour améliorer les compétences du personnel.</li>
+                        <li><b>Optimisation des Processus :</b> Mise en place de procédures opérationnelles pour assurer une gestion fluide du centre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Soft & Hard Skills (Intégré avec le nouveau design) -->
+        <div id="skills-section" class="section-container">
+            <h2 class="text-2xl sm:text-3xl font-bold skills-section-title mb-8">Soft & Hard Skills</h2>
+            <p class="skills-intro-text">
+                Ma personnalité et mes compétences interpersonnelles sont des atouts majeurs pour le succès de vos projets.
+            </p>
+            <div class="skills-grid">
+                <div class="skill-card soft-skills-bg p-6 rounded-lg">
+                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag tag-soft-color-1" data-full-text="Leadership naturel et capacité à motiver les équipes. Mon expérience en tant que Directrice de Centre de Profit chez KFC (Avril 2002 – Mars 2004) m'a permis d'encadrer et de former une équipe de 70 personnes." id="soft-skill-1">
+                            <span class="skill-tag-text">Leadership naturel</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-2" data-full-text="Excellentes compétences en communication et écoute active. Essentielles pour la coordination inter-pôles chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-2">
+                            <span class="skill-tag-text">Communication</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-3" data-full-text="Esprit d'analyse et de synthèse, crucial pour la rédaction de spécifications fonctionnelles détaillées chez Nexpublica (Déc. 2024 – Mai 2025)." id="soft-skill-3">
+                            <span class="skill-tag-text">Analyse & Synthèse</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-4" data-full-text="Rigueur et organisation, démontrées dans la supervision de la recette fonctionnelle chez Groupe Ponticelli Frères (Sept. 2024 – Nov. 2024)." id="soft-skill-4">
+                            <span class="skill-tag-text">Rigueur</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-1" data-full-text="Adaptabilité et flexibilité, un atout dans les environnements multi-conventions chez ADP GSI France (Sept. 2015 - Mars 2017)." id="soft-skill-5">
+                            <span class="skill-tag-text">Adaptabilité</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-2" data-full-text="Proactivité et forte capacité de proposition pour l'amélioration des processus de paie chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="soft-skill-6">
+                            <span class="skill-tag-text">Proactivité</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-3" data-full-text="Orientée résultats et sens du service, pour garantir la performance durable des équipes." id="soft-skill-7">
+                            <span class="skill-tag-text">Orientée résultats</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-soft-color-4" data-full-text="Créativité et innovation, notamment dans la conception de documents interactifs pour la communauté 'Payroll Boss Elite Club'." id="soft-skill-8">
+                            <span class="skill-tag-text">Créativité</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-card hard-skills-bg p-6 rounded-lg">
+                    <div class="info-card-overlay-shape"></div> <!-- Forme décorative -->
+                    <h3>Hard Skills</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag tag-hard-color-1" data-full-text="Gestion de projets, incluant la recette et la mise en production d'outils SIRH chez CGI (Janv. 2023 - Juin 2024)." id="hard-skill-1">
+                            <span class="skill-tag-text">Gestion de projets</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-2" data-full-text="Gestion de la paie et administration RH pour 4 entités et 350 collaborateurs chez Talent Solutions (Juil. 2022 – Déc. 2022)." id="hard-skill-2">
+                            <span class="skill-tag-text">Paie & Admin RH</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-3" data-full-text="Maîtrise des outils SIRH comme HR Access, SAP SuccessFactors et Chronotime, avec une expérience chez Nexpublica et CGI." id="hard-skill-3">
+                            <span class="skill-tag-text">Outils SIRH</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-4" data-full-text="Gestion du changement et formation des utilisateurs, notamment pour le déploiement d'outils Paie et DSN chez CGI." id="hard-skill-4">
+                            <span class="skill-tag-text">Gestion du changement</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-1" data-full-text="Veille réglementaire et technologique continue, avec la rédaction de livres blancs réglementaires chez CGI." id="hard-skill-5">
+                            <span class="skill-tag-text">Veille réglementaire</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-2" data-full-text="Optimisation des processus RH et Paie, mise en œuvre de solutions pour améliorer l'efficacité chez Talent Solutions." id="hard-skill-6">
+                            <span class="skill-tag-text">Optimisation processus</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-3" data-full-text="Management d'équipes pluridisciplinaires, encadrement d'une équipe de 70 personnes chez KFC." id="hard-skill-7">
+                            <span class="skill-tag-text">Management équipes</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                        <span class="skill-tag tag-hard-color-4" data-full-text="Rédaction de spécifications techniques et fonctionnelles, incluant la création de guides utilisateurs et de scripts de tests." id="hard-skill-8">
+                            <span class="skill-tag-text">Rédaction de specs</span>
+                            <span class="skill-tag-toggle">✕</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="main-footer">
-        <p class="footer-text">© 2025 Mathilde Martine PAISLEY - RH Paie Transformation Digitale</p>
+        <p class="footer-text">© 2025 Mathilde Martine PAISLEY - Chief Digital Officer : RH Paie Transformation Digitale</p>
         <!-- Google Calendar Appointment Scheduling begin -->
         <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
         <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -3785,7 +2129,7 @@
                 });
             });
 
-            // Logic for all accordions (timeline, formations, community, handicap, realisations)
+            // Logic for all accordions (timeline, formations, community, handicap, realisations, and AI)
             function setupAccordion(selector, contentSelector, toggleIconSelector) {
                 document.querySelectorAll(selector).forEach(button => {
                     button.addEventListener('click', function() {
@@ -3831,9 +2175,73 @@
             setupAccordion('.community-accordion-header', '.community-accordion-content', '.toggle-icon');
             setupAccordion('.realisations-accordion-header', '.realisations-accordion-content', '.realisations-accordion-toggle-icon');
             
-            // --- Logic for Skill Popups ---
+            // Vertical Text Carousel Logic
+            const carouselContainer = document.querySelector('#text-carousel');
+            let currentIndex = 0;
+            const messages = [
+                { text: '<span class="text-2xl mr-2">🌟</span> Plus de <b>20 ans d\'expérience</b> en RH, Paie et Conseil.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🎓</span> <b>Titre certifié Chief Digital Officer (CDO).</b>', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🚀</span> Pilote la <b>transformation numérique</b> avec vision stratégique et humaine.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">🔗</span> Fait le lien entre <b>métier RH, réglementation et innovation digitale.</b>', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">📈</span> Garantit la <b>performance durable</b> et diffuse la <b>culture digitale.</b>', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">📄</span> Passionnée par la <b>création de documents interactifs</b> et le mentorat.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🍪</span> Adepte de la <b>pâtisserie</b>, de la musique et de la danse.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">💡</span> En <b>veille technologique</b> constante (Apple, Android).', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">💼</span> Expertise en <b>SIRH, Paie et Droit Social</b>.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🤝</span> Créatrice et animatrice de la communauté <b>"Payroll Boss Elite Club"</b>.', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">📚</span> Passionnée de <b>développement personnel et spiritualité</b>.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">⚙️</span> Monte des PC et s\'initie au <b>codage (HTML, CSS, JavaScript)</b>.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🎯</span> Maîtrise des <b>méthodologies Agile et Scrum</b> pour la gestion de projet.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">📊</span> Forte compétence en <b>analyse de données RH et reporting</b>.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🔒</span> Sensibilisation et expertise en <b>cybersécurité</b> appliquée aux systèmes RH.', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">✨</span> Conception centrée utilisateur pour une <b>expérience digitale optimale (UX)</b>.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🗣️</span> Excellentes compétences en <b>communication et prise de parole en public</b>.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🌍</span> Gestion et animation d\'équipes dans des <b>contextes multiculturels</b>.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">⚖️</span> Expertise en <b>gouvernance des données</b> et conformité RGPD.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🌱</span> Engagement pour le <b>développement durable</b> et l\'innovation responsable.', color: 'bordeaux' },
+                { text: '<span class="text-2xl mr-2">💡</span> Capacité à transformer les défis en <b>opportunités d\'innovation</b>.', color: 'rose' },
+                { text: '<span class="text-2xl mr-2">🔄</span> Favorise l\'<b>apprentissage continu</b> et le développement des compétences.', color: 'orange' },
+                { text: '<span class="text-2xl mr-2">🌐</span> Développe des <b>réseaux professionnels</b> solides et des partenariats stratégiques.', color: 'violet' },
+                { text: '<span class="text-2xl mr-2">💖</span> Approche <b>humaine et empathique</b> dans toutes les interactions professionnelles.', color: 'fuchsia' },
+                { text: '<span class="text-2xl mr-2">🛠️</span> Expertise en <b>optimisation des processus</b> et amélioration continue.', color: 'bordeaux' }
+            ];
+
+            // Create all carousel items initially
+            messages.forEach((msg, index) => {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('text-carousel-item');
+                messageElement.innerHTML = msg.text;
+                messageElement.setAttribute('data-color', msg.color);
+                messageElement.setAttribute('data-index', index);
+                carouselContainer.appendChild(messageElement);
+            });
+
+            const carouselItems = document.querySelectorAll('.text-carousel-item');
+
+            function showNextMessage() {
+                // Remove previous active state
+                carouselItems.forEach(item => item.classList.remove('active', 'exit-up', 'enter-down'));
+
+                // Set previous item to exit upwards
+                const prevIndex = (currentIndex - 1 + messages.length) % messages.length;
+                carouselItems[prevIndex].classList.add('exit-up');
+
+                // Set current item to active
+                carouselItems[currentIndex].classList.add('active');
+
+                // Update index for next message
+                currentIndex = (currentIndex + 1) % messages.length;
+            }
+
+            // Show the first message immediately
+            showNextMessage();
+            // Change message every 4 seconds
+            setInterval(showNextMessage, 4000);
+
+            // --- Logic for Skill Popups (Copied from mini version) ---
             const skillTags = document.querySelectorAll('.skill-tag');
             
+
             // Fonction pour fermer tous les popups
             function closeAllPopups() {
                 if (activePopup) {
